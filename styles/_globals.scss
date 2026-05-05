@@ -1,23 +1,23 @@
 @use "helpers" as *;
 
 html {
-  &.is-lock {
-    overflow: hidden;
-  }
+	&.is-lock {
+		overflow: hidden;
+	}
 }
 
 body {
-  @include fluid-text(16, 14);
+	font-size: rem(16);
 
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-family-base);
-  color: var(--color-gray-30);
-  background-color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	font-family: var(--font-family-base);
+	color: var(--color-gray-30);
+	background-color: var(--color-white);
 }
 
 main {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 h1,
@@ -32,39 +32,44 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: var(--color-gray-10);
-  font-weight: 700;
+	color: var(--color-gray-10);
+	font-weight: 700;
 }
 
 h1,
 .h1 {
-  font-size: fluid-to-laptop(72, 48);
-  font-weight: 800;
-  line-height: 1;
+	font-size: fluid-to-laptop(72, 48);
+	font-weight: 800;
+	line-height: 1;
 }
+
 h2,
 .h2 {
-  @include fluid-text(48, 36);
+	@include fluid-text(48, 36);
 
-  line-height: 1.15;
+	line-height: 1.15;
 }
+
 h3,
 .h3 {
-  @include fluid-text(36, 30);
-  line-height: 1.2;
+	@include fluid-text(36, 30);
+	line-height: 1.2;
 }
+
 h4,
 .h4 {
-  font-size: rem(24);
-  line-height: 1.3;
+	font-size: rem(24);
+	line-height: 1.3;
 }
+
 h5,
 .h5 {
-  @include fluid-text(20, 18);
+	@include fluid-text(20, 18);
 }
+
 h6,
 .h6 {
-  font-size: rem(16);
+	font-size: rem(16);
 }
 
 a,
@@ -74,32 +79,39 @@ input,
 textarea,
 select,
 svg * {
-  transition-duration: var(--transition-duration);
+	transition-duration: var(--transition-duration);
 }
 
 a {
-  color: inherit;
+	color: inherit;
 
-  @include hover {
-    color: var(--color-accent);
-  }
+	@include hover {
+		color: var(--color-accent);
+	}
 
-  &[class] {
-    text-decoration: none;
-  }
+	&[class] {
+		text-decoration: none;
+	}
+}
+
+blockquote {
+	margin: 0;
+	padding: fluid(10, 5) fluid(20, 15);
+	background-color: rgba(245, 73, 0, 0.1);
+	border-left: 4px solid var(--color-accent);
 }
 
 :focus-visible {
-  outline: rem(2) dashed var(--color-gray-30);
-  outline-offset: rem(4);
-  transition-duration: 0s !important;
+	outline: rem(2) dashed var(--color-gray-30);
+	outline-offset: rem(4);
+	transition-duration: 0s !important;
 }
 
 // .header,
 // .footer {
-//   display: none !important;
+// 	display: none !important;
 // }
 
-// main > section:not(:last-child) {
-//   display: none !important;
+// main>section:not(:last-child) {
+// 	display: none !important;
 // }

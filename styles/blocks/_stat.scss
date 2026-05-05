@@ -1,0 +1,23 @@
+@use "../helpers" as *;
+
+.stat {
+	display: grid;
+	row-gap: fluid(10, 5);
+	margin-bottom: fluid(24, 20);
+
+	&__value {
+		@include fluid-text(48, 30);
+
+		font-weight: 700;
+		line-height: 1;
+		color: var(--color-accent);
+	}
+
+	&__text {
+		@include fluid-text(20, 16);
+
+		font-weight: 500;
+		color: var(--color-white);
+	}
+
+}

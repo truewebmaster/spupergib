@@ -1,0 +1,16 @@
+@use "../helpers" as *;
+
+.guide {
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 30% auto;
+		column-gap: fluid-to-laptop(80, 60);
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			row-gap: rem(50);
+		}
+	}
+
+}

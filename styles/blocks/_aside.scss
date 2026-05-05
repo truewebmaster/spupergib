@@ -1,0 +1,29 @@
+@use "../helpers" as *;
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(20);
+
+	&__title {
+		text-transform: uppercase;
+		color: var(--color-gray-50);
+	}
+
+	&--sticky {
+		position: sticky;
+		top: rem(70);
+
+		@include tablet {
+			position: unset;
+		}
+	}
+
+	&--dark {
+		padding: fluid-to-laptop(32, 28);
+		background-color: var(--color-gray-10);
+		color: var(--color-white);
+		border-radius: var(--border-radius-m);
+		align-self: start;
+	}
+}
