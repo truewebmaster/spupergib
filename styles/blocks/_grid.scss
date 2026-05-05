@@ -9,6 +9,10 @@
 
   &--cols-2 {
     --cols: 2;
+
+    @include mobile {
+      --cols: 1;
+    }
   }
 
   &--cols-3 {

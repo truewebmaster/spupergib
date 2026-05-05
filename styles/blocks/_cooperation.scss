@@ -1,0 +1,46 @@
+@use "../helpers" as *;
+
+.cooperation {
+  background: linear-gradient(
+    115deg,
+    var(--color-gray-10) 60%,
+    var(--color-gray-15) 40%
+  );
+
+  color: var(--color-white);
+  padding: fluid(64, 32);
+  // margin-block: var(--section-padding-block);
+  background-color: var(--color-gray-10);
+  border-radius: var(--border-radius-l);
+
+  @include mobile {
+    border-radius: var(--border-radius-m);
+  }
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: fluid-to-laptop(48, 30);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: fluid(48, 30);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(26, 20);
+  }
+
+  &__description {
+    margin-bottom: rem(8);
+    color: var(--color-gray-50);
+  }
+
+  &__title {
+    color: var(--color-white);
+  }
+}

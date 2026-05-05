@@ -4,13 +4,18 @@
   column-gap: rem(8);
   align-items: center;
   align-self: start;
+  justify-self: start;
   padding: rem(5) rem(12);
   color: var(--color-accent);
   font-size: rem(14);
   font-weight: 600;
   border: rem(1) solid var(--color-orange-30);
   border-radius: var(--border-radius-m);
-  background-color: var(--color-orange-50);
+  background-color: rgba(245, 73, 0, 0.2);
+
+  &--dark {
+    border: none;
+  }
 
   &--circl {
     &::before {

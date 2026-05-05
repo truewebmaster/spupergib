@@ -1,0 +1,50 @@
+@use "../helpers" as *;
+
+.advantages-card {
+  height: 100%;
+  border: var(--border-light);
+  border-radius: var(--border-radius-m);
+  padding: fluid-to-laptop(33, 20);
+  box-shadow: var(--shadow-light);
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    box-shadow: var(--shadow-light-hover);
+    transition-duration: var(--transition-duration);
+
+    .advantages-card__icon {
+      scale: 1.1;
+    }
+  }
+
+  &--dark {
+    background-color: rgba(49, 65, 88, 0.2);
+    backdrop-filter: blur(rem(5));
+    border: var(--border-dark);
+    box-shadow: none;
+
+    & .advantages-card__description {
+      color: var(--color-gray-50);
+    }
+
+    @include hover {
+      border-color: var(--color-orange-25);
+    }
+
+    & .advantages-card__title {
+      color: var(--color-white);
+    }
+  }
+
+  &__icon {
+    margin-bottom: fluid-to-laptop(24, 20);
+  }
+
+  &__title {
+    margin-bottom: fluid-to-laptop(12, 10);
+  }
+
+  &__description {
+    color: var(--color-gray-40);
+  }
+}

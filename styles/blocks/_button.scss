@@ -3,6 +3,7 @@
 .button {
   display: inline-flex;
   justify-content: center;
+  align-self: start;
   min-width: rem(150);
   font-size: fluid(18, 16);
   font-weight: 500;

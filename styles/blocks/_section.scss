@@ -11,6 +11,14 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
+
+    &--center {
+      text-align: center;
+
+      & .section__head {
+        row-gap: fluid-to-laptop(18, 14);
+      }
+    }
   }
 
   &__head {

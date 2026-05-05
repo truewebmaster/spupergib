@@ -11,6 +11,7 @@
   --color-orange-50: #fff7ed;
 
   --color-gray-10: #0f172b;
+  --color-gray-15: #162034;
   --color-gray-20: #314158;
   --color-gray-30: #45556c;
   --color-gray-40: #62748e;
@@ -19,6 +20,7 @@
   --color-gray-80: #f8fafc;
 
   --border: #{rem(1)} solid var(--color-gray-70);
+  --border-light: #{rem(1)} solid #f1f5f9;
   --border-dark: #{rem(1)} solid var(--color-gray-20);
 
   --border-radius-l: #{rem(40)};
@@ -29,6 +31,14 @@
   --shadow:
     0 #{rem(8)} #{rem(10)} #{rem(-6)} rgba(0, 0, 0, 0.1),
     0 #{rem(20)} #{rem(25)} #{rem(-5)} rgba(0, 0, 0, 0.1);
+
+  --shadow-light:
+    0 #{rem(1)} #{rem(3)} 0 rgba(0, 0, 0, 0.1),
+    0 #{rem(1)} #{rem(2)} #{rem(-1)} rgba(0, 0, 0, 0.1);
+
+  --shadow-light-hover:
+    0 #{rem(8)} #{rem(12)} #{rem(-6)} rgba(0, 0, 0, 0.15),
+    0 #{rem(10)} #{rem(20)} #{rem(-5)} rgba(0, 0, 0, 0.2);
 
   --font-family-base: "Inter", sans-serif;
 

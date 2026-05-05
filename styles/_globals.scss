@@ -60,7 +60,7 @@ h4,
 }
 h5,
 .h5 {
-  font-size: rem(18);
+  @include fluid-text(20, 18);
 }
 h6,
 .h6 {
