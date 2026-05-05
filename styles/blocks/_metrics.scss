@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.metrics {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: fluid(30, 15);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+  }
+
+  &__nums {
+    @include square(rem(40));
+    @include flex-center;
+
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--color-gray-10);
+    background-color: var(--color-gray-70);
+    border-radius: var(--border-radius-l);
+  }
+
+  &__text {
+    font-size: rem(14);
+    font-weight: 500px;
+    color: var(--color-gray-40);
+  }
+}

@@ -1,0 +1,62 @@
+@use "../helpers" as *;
+
+.icon {
+  --size: #{rem(48)};
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: rem(10);
+  background-color: var(--color-orange-50);
+  border-radius: 50%;
+  padding: rem(5);
+  aspect-ratio: 1;
+  transition-duration: var(--transition-duration);
+
+  @include square(var(--size));
+
+  &--width-32 {
+    --size: #{rem(32)};
+  }
+
+  &--width-36 {
+    --size: #{rem(36)};
+  }
+
+  &--width-48 {
+    --size: #{rem(48)};
+  }
+
+  &--width-56 {
+    --size: #{rem(56)};
+  }
+
+  &--color-gray {
+    background-color: var(--color-gray-80);
+  }
+
+  &--color-white {
+    background-color: var(--color-white);
+  }
+
+  &--color-transparent {
+    background-color: transparent;
+    padding: 0;
+    --size: #{rem(20)};
+    margin-right: rem(8);
+  }
+
+  &--active {
+    @include hover {
+      background-color: var(--color-orange-30);
+    }
+  }
+
+  &--cub {
+    border-radius: var(--border-radius-s);
+  }
+
+  &__img {
+    flex-shrink: 0;
+  }
+}

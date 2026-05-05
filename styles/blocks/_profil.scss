@@ -1,0 +1,63 @@
+@use "../helpers" as *;
+
+.profil {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: fluid-to-laptop(80, 60);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: rem(60);
+    }
+  }
+
+  &__block-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+
+    @include tablet {
+      order: 1;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__body {
+    max-width: rem(576);
+    @include tablet {
+      max-width: rem(768);
+    }
+  }
+
+  &__wrap-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: rem(16);
+    justify-content: center;
+
+    & > :last-child {
+      margin-top: rem(50);
+    }
+
+    & > :first-child {
+      align-self: start;
+    }
+  }
+
+  &__image {
+    height: rem(256);
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--shadow);
+  }
+
+  &__content {
+    padding: rem(25) 0 rem(40);
+  }
+}

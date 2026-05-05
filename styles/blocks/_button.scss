@@ -1,0 +1,69 @@
+@use "../helpers" as *;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  min-width: rem(150);
+  font-size: fluid(18, 16);
+  font-weight: 500;
+  padding: fluid-to-laptop(14, 12) fluid-to-laptop(32, 28);
+  color: var(--color-gray-10);
+  background-color: var(--color-white);
+  white-space: nowrap;
+  border: var(--border);
+  border-radius: var(--border-radius-x);
+  cursor: pointer;
+
+  @include mobile-s {
+    width: 100%;
+  }
+
+  @include hover {
+    color: var(--color-accent);
+    background-color: var(--color-gray-80);
+  }
+
+  &--accent {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-orange-10);
+    }
+  }
+
+  &--gray {
+    color: var(--color-white);
+    background-color: var(--color-gray-10);
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-gray-20);
+    }
+  }
+
+  &--phone {
+    @include square(rem(40));
+    @include flex-center;
+
+    display: none;
+    min-width: unset;
+    border-radius: 50%;
+    padding: rem(5) !important;
+
+    @include mobile-s {
+      display: flex;
+    }
+
+    & img {
+      @include square(rem(20));
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      scale: 1.1;
+    }
+  }
+}

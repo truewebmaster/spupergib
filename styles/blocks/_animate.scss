@@ -1,0 +1,37 @@
+@use "../helpers" as *;
+
+[data-animate] {
+  opacity: 0;
+  transform: var(--anim-transform, translateY(0));
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+[data-animate].is-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-animate="fade-up"] {
+  --anim-transform: translateY(40px);
+}
+
+[data-animate="fade-down"] {
+  --anim-transform: translateY(-40px);
+}
+
+[data-animate="fade-left"] {
+  --anim-transform: translateX(-40px);
+}
+
+[data-animate="fade-right"] {
+  --anim-transform: translateX(40px);
+}
+
+@include mobile {
+  [data-animate] {
+    --anim-transform: translateY(40px);
+    transition-duration: 0.5s;
+  }
+}

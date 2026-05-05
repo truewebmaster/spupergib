@@ -1,0 +1,65 @@
+@use "../helpers" as *;
+
+.card-category {
+  display: grid;
+  align-items: center;
+
+  &__image-wrapper {
+    position: relative;
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+    margin-bottom: rem(16);
+  }
+
+  &__arrow {
+    position: absolute;
+    right: rem(15);
+    bottom: rem(-55);
+    opacity: 0;
+    transition:
+      bottom var(--transition-duration-longer) ease,
+      opacity var(--transition-duration-longer) ease,
+      filter var(--transition-duration-longer) ease;
+  }
+
+  @include hover {
+    .card-category__image {
+      transform: scale(1.05);
+      filter: brightness(85%);
+    }
+
+    .card-category__title {
+      color: var(--color-accent);
+    }
+
+    .card-category__arrow {
+      bottom: rem(15);
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    border-radius: var(--border-radius-s);
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition:
+      transform var(--transition-duration-longer) ease,
+      filter var(--transition-duration-longer) ease;
+
+    @include mobile {
+      aspect-ratio: 2/1.5;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(4);
+    transition-duration: var(--transition-duration-longer);
+  }
+
+  &__description {
+    font-size: rem(14);
+    color: var(--color-gray-40);
+  }
+}

@@ -1,0 +1,46 @@
+@use "helpers" as *;
+
+:root {
+  --color-white: #ffffff;
+
+  --color-accent: #f54900;
+
+  --color-orange-10: #ca3500;
+  --color-orange-25: #ff8904;
+  --color-orange-30: #ffedd4;
+  --color-orange-50: #fff7ed;
+
+  --color-gray-10: #0f172b;
+  --color-gray-20: #314158;
+  --color-gray-30: #45556c;
+  --color-gray-40: #62748e;
+  --color-gray-50: #90a1b9;
+  --color-gray-70: #e2e8f0;
+  --color-gray-80: #f8fafc;
+
+  --border: #{rem(1)} solid var(--color-gray-70);
+  --border-dark: #{rem(1)} solid var(--color-gray-20);
+
+  --border-radius-l: #{rem(40)};
+  --border-radius-m: #{rem(24)};
+  --border-radius-s: #{rem(16)};
+  --border-radius-x: #{rem(14)};
+
+  --shadow:
+    0 #{rem(8)} #{rem(10)} #{rem(-6)} rgba(0, 0, 0, 0.1),
+    0 #{rem(20)} #{rem(25)} #{rem(-5)} rgba(0, 0, 0, 0.1);
+
+  --font-family-base: "Inter", sans-serif;
+
+  --container-width: #{fluid-to-laptop(
+      $container-desktop-width,
+      $container-laptop-width
+    )};
+
+  --container-padding-x: #{rem(16)};
+
+  --section-padding-block: #{fluid(80, 40)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

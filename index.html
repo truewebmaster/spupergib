@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperGib | Главная</title>
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <a href="/" class="header__logo logo" title="Главная">
+            <img
+              src="./img/logo.svg"
+              alt=""
+              class="logo__image"
+              width="250"
+              height="36"
+            />
+          </a>
+          <a
+            class="header__action-phone header__action-phone--logo"
+            href="tel:+79255638484"
+            >+7 (925) 563-84-84</a
+          >
+
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="./index.html" class="header__menu-link is-active"
+                    >Каталог</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Радиусные элементы</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Вытяжки</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Короба</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Отливы</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__action">
+              <div class="header__action-info">
+                <a class="header__action-phone" href="tel:+79255638484"
+                  >+7 (925) 563-84-84</a
+                >
+                <div class="header__action-time-work">
+                  Ежедневно 9:00 - 20:00
+                </div>
+              </div>
+              <a href="#" class="header__contact-us-link button button--accent"
+                >Заказать звонок</a
+              >
+            </div>
+          </div>
+
+          <div class="header__mob-action visible-tablet">
+            <a
+              href="tel:+79255638484"
+              class="header__contact-us-link button button--accent button--phone"
+              ><img src="./icons/phone.svg" alt="Позвонить"
+            /></a>
+            <button
+              class="burger-button"
+              type="button"
+              aria-label="Открыть меню"
+              title="Open menu"
+              data-js-header-burger-button
+            >
+              <svg
+                class="burger-button__svg"
+                width="30"
+                height="30"
+                viewBox="0 0 100 100"
+              >
+                <path
+                  class="burger-button__line burger-button__line--1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path
+                  class="burger-button__line burger-button__line--2"
+                  d="M 20,50 H 80"
+                />
+                <path
+                  class="burger-button__line burger-button__line--3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner container">
+          <div class="hero__body" data-animate="fade-up" data-delay="100">
+            <div class="hero__badge badge badge--circl">
+              Собственное производство в Москве
+            </div>
+            <h1 id="hero-title" class="hero-title">
+              Идеальная <span class="liner-gradient">геометрия</span> металла
+            </h1>
+            <div class="hero__description">
+              <p>
+                Изготавливаем сложные радиусные элементы, вытяжки и короба
+                премиум-класса. Точность до миллиметра для тех, кто ценит
+                качество.
+              </p>
+            </div>
+            <div class="hero__action">
+              <a href="/" class="button button--accent">Рассчитать проект</a>
+              <a href="/" class="button">Каталог изделий</a>
+            </div>
+            <div class="hero__bottom metrics">
+              <ul class="metrics__list">
+                <li class="metrics__item">
+                  <div class="metrics__nums">10+</div>
+                  <div class="metrics__text">Лет опыта</div>
+                </li>
+                <li class="metrics__item">
+                  <div class="metrics__nums">ТК</div>
+                  <div class="metrics__text">Доставка по РФ</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hero__img-block" data-animate="fade" data-delay="200">
+            <img
+              class="hero__img"
+              src="./img/hero-img.jpg"
+              alt=""
+              width="704"
+              height="700"
+            />
+            <div class="hero__img-block-info">
+              <div class="icon">
+                <img
+                  src="./icons/arrow-right-accent.svg"
+                  class="icon__img"
+                  alt=""
+                  width="8"
+                  height="8"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero__img-block-text">
+                <div class="hero__img-block-title h6">Сложные формы</div>
+                <div class="hero__img-block-description">
+                  Мы беремся за заказы, от которых отказываются другие
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section category container"
+        aria-labelledby="category-title"
+      >
+        <header class="section__header">
+          <div class="section__head">
+            <div class="section__sub-title">Интернет-магазин</div>
+            <h2 class="section__title h3" id="category-title">
+              Категории товаров
+            </h2>
+          </div>
+          <div class="section__actions">
+            <a class="section__link" href="/">Перейти в каталог</a>
+          </div>
+        </header>
+        <div class="section__body">
+          <ul class="category__list grid grid--cols-4">
+            <li class="category__item" data-animate="fade-up" data-delay="0">
+              <a class="card-category" href="/">
+                <div class="card-category__image-wrapper">
+                  <img
+                    src="./img/category/vitujka.jpg"
+                    alt=""
+                    width="380"
+                    height="443"
+                    loading="lazy"
+                    decoding="async"
+                    class="card-category__image"
+                  />
+                  <div class="icon icon--color-white card-category__arrow">
+                    <img
+                      src="/icons/arrow-right.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+
+                <h3 class="card-category__title h5">Вытяжки</h3>
+                <div class="card-category__description">
+                  Премиальные решения
+                </div>
+              </a>
+            </li>
+            <li class="category__item" data-animate="fade-up" data-delay="100">
+              <a href="/" class="card-category">
+                <div class="card-category__image-wrapper">
+                  <img
+                    src="./img/category/korob.jpg"
+                    alt=""
+                    width="380"
+                    height="443"
+                    loading="lazy"
+                    decoding="async"
+                    class="card-category__image"
+                  />
+                  <div class="icon icon--color-white card-category__arrow">
+                    <img
+                      src="/icons/arrow-right.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+
+                <h3 class="card-category__title h5">Короба для вытяжек</h3>
+                <div class="card-category__description">Любые конфигурации</div>
+              </a>
+            </li>
+            <li class="category__item" data-animate="fade-up" data-delay="200">
+              <a href="/" class="card-category">
+                <div class="card-category__image-wrapper">
+                  <img
+                    src="./img/category/radius-element.jpg"
+                    alt=""
+                    width="380"
+                    height="443"
+                    loading="lazy"
+                    decoding="async"
+                    class="card-category__image"
+                  />
+                  <div class="icon icon--color-white card-category__arrow">
+                    <img
+                      src="/icons/arrow-right.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+
+                <h3 class="card-category__title h5">Радиусные элементы</h3>
+                <div class="card-category__description">Сложная геометрия</div>
+              </a>
+            </li>
+            <li class="category__item" data-animate="fade-up" data-delay="300">
+              <a class="card-category" href="/">
+                <div class="card-category__image-wrapper">
+                  <img
+                    src="./img/category/otlivi.jpg"
+                    alt=""
+                    width="380"
+                    height="443"
+                    loading="lazy"
+                    decoding="async"
+                    class="card-category__image"
+                  />
+                  <div class="icon icon--color-white card-category__arrow">
+                    <img
+                      src="/icons/arrow-right.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <h3 class="card-category__title h5">Отливы и парапеты</h3>
+                <div class="card-category__description">Защита и эстетика</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section profil" aria-labelledby="profil-title">
+        <div class="profil__inner container">
+          <div class="profil__block-photo">
+            <div class="profil__wrap-image">
+              <img
+                data-animate="fade"
+                data-delay="300"
+                class="profil__image"
+                src="/img/profil/image-1.jpg"
+                width="344"
+                height="256"
+                loading="lazy"
+                decoding="async"
+                alt=""
+              />
+              <img
+                data-animate="fade"
+                data-delay="400"
+                class="profil__image"
+                src="/img/profil/image-2.jpg"
+                width="344"
+                height="256"
+                loading="lazy"
+                decoding="async"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="profil__body" data-animate="fade-right" data-delay="200">
+            <div class="section__head">
+              <div
+                class="section__sub-title section__sub-title--gray section__sub-title--padding-bottom-20"
+              >
+                <div class="icon icon--color-transparent">
+                  <img
+                    src="./icons/star-accent.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </div>
+                Наш профиль
+              </div>
+              <h2 class="section__title" id="profil-title">
+                Радиусные элементы
+                <span class="color-gray">любой сложности</span>
+              </h2>
+            </div>
+            <div class="profil__content">
+              <p>
+                Мы создаем эксклюзивные радиусные изделия для современной
+                архитектуры. Парапеты, отливы, декоративные элементы фасада и
+                интерьера — всё это требует ювелирной точности гибки, которую мы
+                гарантируем.
+              </p>
+              <ul class="list list--check-mark">
+                <li class="list__item">
+                  <div class="icon icon--color-gray icon--width-36">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 4L5.99996 11.3333L2.66663 8"
+                        stroke-width="1.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  Плавные линии без заломов
+                </li>
+                <li class="list__item">
+                  <div class="icon icon--color-gray icon--width-36">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 4L5.99996 11.3333L2.66663 8"
+                        stroke-width="1.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  Идеальная стыковка сегментов
+                </li>
+                <li class="list__item">
+                  <div class="icon icon--color-gray icon--width-36">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 4L5.99996 11.3333L2.66663 8"
+                        stroke-width="1.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  Работа с медью, алюминием, оцинкованной сталью
+                </li>
+                <li class="list__item">
+                  <div class="icon icon--color-gray icon--width-36">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 4L5.99996 11.3333L2.66663 8"
+                        stroke-width="1.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  Порошковая покраска в любой цвет RAL
+                </li>
+              </ul>
+            </div>
+            <div class="profil__action">
+              <a href="/catalog" class="button button--gray"
+                >Посмотреть примеры работ</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" aria-labelledby="catalog-title">
+        <header class="section__header">
+          <div class="section__head">
+            <h2 class="section__title h3" id="catalog-title">
+              Каталог продукции
+            </h2>
+            <div class="section__description">
+              <p>Качество в каждой детали</p>
+            </div>
+          </div>
+          <div class="section__actions">
+            <a href="/" class="button">Скачать прайс-лист</a>
+          </div>
+        </header>
+        <div class="section__body catalog">
+          <ul class="catalog__list">
+            <li
+              class="catalog__item catalog__item-bl-1"
+              style="background-image: url(./img/catalog/image-1.jpg)"
+              data-animate="fade-up"
+              data-delay="100"
+            >
+              <a href="/" class="catalog__link">
+                <div class="catalog__sub-title">Премиум дизайн</div>
+                <h3 class="catalog__title h4">Кухонные вытяжки</h3>
+                <p class="catalog__description">
+                  Индивидуальное изготовление под стиль вашей кухни. Любые
+                  размеры и формы.
+                </p>
+              </a>
+              <div class="icon icon--color-white catalog__arrow">
+                <img
+                  src="/icons/arrow-up-right.svg"
+                  width="12"
+                  height="12"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </li>
+            <li
+              class="catalog__item catalog__item-bl-2"
+              style="background-image: url(./img/catalog/image-2.jpg)"
+              data-animate="fade-up"
+              data-delay="200"
+            >
+              <a href="/" class="catalog__link">
+                <div class="catalog__sub-title">Промышленный стандарт</div>
+                <h3 class="catalog__title h4">Вентиляционные короба</h3>
+                <p class="catalog__description">
+                  Герметичные и прочные системы для любых типов помещений.
+                </p>
+              </a>
+              <div class="icon icon--color-white catalog__arrow">
+                <img
+                  src="/icons/arrow-up-right.svg"
+                  width="12"
+                  height="12"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </li>
+            <li
+              class="catalog__item catalog__item-bl-3"
+              style="background-image: url(./img/catalog/image-3.jpg)"
+              data-animate="fade-up"
+              data-delay="300"
+            >
+              <a href="/" class="catalog__link">
+                <div class="catalog__sub-title">Защита фасада</div>
+                <h3 class="catalog__title h4">Отливы и парапеты</h3>
+                <p class="catalog__description">
+                  Долговечные решения для защиты оконных проемов и кровельных
+                  конструкций.
+                </p>
+              </a>
+              <div class="icon icon--color-white catalog__arrow">
+                <img
+                  src="/icons/arrow-up-right.svg"
+                  width="12"
+                  height="12"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </li>
+            <li
+              class="catalog__item catalog__item-bl-4"
+              style="background-image: url(./img/catalog/image-4.jpg)"
+              data-animate="fade-up"
+              data-delay="400"
+            >
+              <a href="/" class="catalog__link">
+                <div class="catalog__sub-title">
+                  Ваши идеи — наше исполнение
+                </div>
+                <h3 class="catalog__title h4">Индивидуальный заказ</h3>
+                <p class="catalog__description">
+                  Реализуем любые нестандартные изделия по вашим чертежам.
+                </p>
+              </a>
+              <div class="icon icon--color-white catalog__arrow">
+                <img
+                  src="/icons/arrow-up-right.svg"
+                  width="12"
+                  height="12"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__body">
+        <div class="footer__body-inner container">
+          <div class="footer__info">
+            <h2 class="footer__title">Контакты</h2>
+            <div class="footer__description">
+              <p>
+                Мы всегда открыты для новых проектов и готовы ответить на любые
+                ваши вопросы.
+              </p>
+            </div>
+            <div class="footer__contact">
+              <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                  <div class="icon icon--color-gray">
+                    <img
+                      src="./icons/footer/icon-1.svg"
+                      alt="Телефон"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="footer__contact-item-info">
+                    <h3 class="h5 footer__contact-item-title">Позвоните нам</h3>
+                    <div class="footer__contact-item-description">
+                      Мы на связи ежедневно
+                    </div>
+                    <a
+                      class="footer__contact-item-phone"
+                      href="tel:+79525638484"
+                      >+7 (952) 563-84-84</a
+                    >
+                  </div>
+                </li>
+                <li class="footer__contact-item">
+                  <div class="icon icon--color-gray">
+                    <img
+                      src="./icons/footer/icon-2.svg"
+                      alt="Почта"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="footer__contact-item-info">
+                    <h3 class="h5 footer__contact-item-title">Напишите нам</h3>
+                    <div class="footer__contact-item-description">
+                      Присылайте чертежи на расчет
+                    </div>
+                    <a
+                      class="footer__contact-item-email"
+                      href="mailto:info@supergib.ru"
+                      >info@supergib.ru</a
+                    >
+                  </div>
+                </li>
+                <li class="footer__contact-item">
+                  <div class="icon icon--color-gray">
+                    <img
+                      src="./icons/footer/icon-3.svg"
+                      alt="Адрес"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="footer__contact-item-info">
+                    <h3 class="h5 footer__contact-item-title">Напишите нам</h3>
+                    <div class="footer__contact-item-adress">
+                      г. Москва, ул. Производственная, д. 1 (м. Юго-Западная)
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__form">
+            <form
+              class="form form--request"
+              action="#"
+              method="post"
+              novalidate
+            >
+              <div class="form__inner">
+                <h2 class="form__title h4">Оставить заявку</h2>
+
+                <!-- Два поля в ряд -->
+                <div class="form__row form__row--cols-2">
+                  <div class="form__field">
+                    <label class="form__label" for="name">Ваше имя</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Иван"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="phone">Телефон</label>
+                    <input
+                      class="form__input"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="+7 (___) ___-__-__"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Комментарий -->
+                <div class="form__field">
+                  <label class="form__label" for="comment">Комментарий</label>
+                  <textarea
+                    class="form__textarea"
+                    id="comment"
+                    name="comment"
+                    placeholder="Опишите задачу или прикрепите ссылку на чертеж..."
+                    rows="4"
+                  ></textarea>
+                </div>
+
+                <!-- Кнопка -->
+                <div class="form__actions">
+                  <button class="form__submit" type="submit">
+                    <span>Отправить</span
+                    ><img
+                      src="/icons/mail.svg"
+                      width="16"
+                      height="16"
+                      loading="lazy"
+                      alt="Отправить"
+                    />
+                  </button>
+                </div>
+
+                <!-- Текст под кнопкой -->
+                <div class="form__privacy">
+                  Ваши данные под надежной защитой
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner container">
+          <a href="/" class="footer__logo logo" title="Главная">
+            <img
+              src="./img/logo.svg"
+              alt=""
+              class="logo__image"
+              width="250"
+              height="36"
+            />
+          </a>
+          <div class="footer__bottom-private">
+            <p>© 2026 SUPERGIB. Все права защищены.</p>
+          </div>
+          <div class="footer__bottom-soc1als">
+            <a href="/" class="icon icon--color-gray icon--active">
+              <img
+                src="./icons/footer/icon-3.svg"
+                alt="Адрес"
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </a>
+            <a href="/" class="icon icon--color-gray icon--active">
+              <img
+                src="./icons/footer/icon-3.svg"
+                alt="Адрес"
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
