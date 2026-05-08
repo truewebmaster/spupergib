@@ -1,8 +1,12 @@
 @use "../helpers" as *;
 
 .button {
+  --sizeIcon: #{rem(16)};
+
   display: inline-flex;
   justify-content: center;
+  align-items: center;
+  column-gap: rem(8);
   align-self: start;
   min-width: rem(150);
   font-size: fluid(18, 16);
@@ -22,6 +26,24 @@
   @include hover {
     color: var(--color-accent);
     background-color: var(--color-gray-80);
+
+    .button__icon--white {
+      color: var(--color-gray-20);
+    }
+  }
+
+  &__icon {
+    @include square(var(--sizeIcon));
+    color: var(--color-gray-10);
+    transition-duration: var(--transition-duration);
+
+    &--accent {
+      color: var(--color-orange-25);
+    }
+
+    &--white {
+      color: var(--color-gray-50);
+    }
   }
 
   &--accent {
@@ -35,12 +57,74 @@
     }
   }
 
+  &--orange {
+    color: var(--color-white);
+    background-color: var(--color-orange-25);
+    border-color: var(--color-orange-25);
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-orange-15);
+      border-color: var(--color-orange-15);
+    }
+  }
+
+  &--border-none {
+    --sizeIcon: #{rem(10)};
+    border: none;
+    padding-left: 0;
+    background-color: transparent;
+
+    .button__icon {
+      color: var(--color-accent);
+      margin-top: rem(2.5);
+    }
+  }
+
+  &--opacity-white {
+    color: var(--color-white);
+    font-size: rem(14);
+    font-weight: 400;
+    background-color: rgba(225, 225, 225, 0.1);
+    border-color: rgba(225, 225, 225, 0.1);
+
+    @include hover {
+      color: var(--color-white);
+      background-color: rgba(225, 225, 225, 0.2);
+    }
+  }
+
+  &--white {
+    color: var(--color-gray-50);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    font-size: rem(14);
+
+    @include hover {
+      color: var(--color-gray-20);
+      background-color: var(--color-gray-80);
+    }
+  }
+
   &--gray {
     color: var(--color-white);
     background-color: var(--color-gray-10);
     @include hover {
       color: var(--color-white);
       background-color: var(--color-gray-20);
+    }
+  }
+
+  &--product-card {
+    display: flex;
+    align-items: center;
+    column-gap: rem(5);
+    font-size: rem(14);
+    padding: fluid-to-laptop(10, 8) fluid-to-laptop(30, 26);
+    @include hover {
+      background-color: var(--color-orange-25);
+      border-color: var(--color-orange-25);
+      color: var(--color-white);
     }
   }
 

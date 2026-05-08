@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.service {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(32, 24);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

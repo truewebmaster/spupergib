@@ -3,6 +3,10 @@
 .section {
   padding-block: var(--section-padding-block);
 
+  &--page-first {
+    padding-top: 0;
+  }
+
   &__header {
     margin-bottom: fluid-to-laptop(48, 26);
     &:has(.section__actions) {

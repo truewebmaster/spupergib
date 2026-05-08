@@ -1,0 +1,15 @@
+@use "../helpers" as *;
+
+.page-header {
+  display: grid;
+  row-gap: fluid-to-laptop(18, 12);
+  margin-block: rem(30);
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__description {
+    max-width: rem(675);
+  }
+}

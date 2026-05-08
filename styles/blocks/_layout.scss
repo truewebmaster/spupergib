@@ -1,0 +1,68 @@
+@use "../helpers" as *;
+
+.layout {
+  --gapDivided: #{fluid-to-laptop(100, 50)};
+  --gapDividedScale: #{fluid-to-laptop(50, 25)};
+
+  &--left-aside {
+    display: grid;
+    grid-template-columns: rem(280) auto;
+    grid-template-areas: "aside content";
+    column-gap: rem(50);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "aside"
+        "content";
+      row-gap: rem(50);
+    }
+  }
+
+  .layout__aside {
+    grid-area: aside;
+  }
+
+  .layout__content {
+    grid-area: content;
+  }
+
+  &--reverse-mobile {
+    @include mobile {
+      grid-template-areas:
+        "content"
+        "aside";
+    }
+  }
+
+  &--aside-divided {
+    @include mobile-above {
+      column-gap: var(--gapDivided);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(rem(280) + var(--gapDividedScale));
+        width: rem(1);
+        background: var(--color-gray-70);
+      }
+    }
+  }
+
+  &--aside-big {
+    grid-template-columns: rem(360) auto;
+  }
+
+  &--tablet-collapse {
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "aside"
+        "content";
+      row-gap: rem(10);
+    }
+  }
+}

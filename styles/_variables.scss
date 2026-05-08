@@ -6,6 +6,7 @@
   --color-accent: #f54900;
 
   --color-orange-10: #ca3500;
+  --color-orange-15: #ff6900;
   --color-orange-25: #ff8904;
   --color-orange-30: #ffedd4;
   --color-orange-50: #fff7ed;
@@ -17,13 +18,15 @@
   --color-gray-40: #62748e;
   --color-gray-50: #90a1b9;
   --color-gray-70: #e2e8f0;
+  --color-gray-75: #f1f5f9;
   --color-gray-80: #f8fafc;
 
   --border: #{rem(1)} solid var(--color-gray-70);
-  --border-light: #{rem(1)} solid #f1f5f9;
+  --border-light: #{rem(1)} solid var(--color-gray-75);
   --border-dark: #{rem(1)} solid var(--color-gray-20);
 
   --border-radius-l: #{rem(40)};
+  --border-radius-xl: #{rem(32)};
   --border-radius-m: #{rem(24)};
   --border-radius-s: #{rem(16)};
   --border-radius-x: #{rem(14)};
@@ -47,10 +50,14 @@
       $container-laptop-width
     )};
 
-  --container-padding-x: #{rem(16)};
+  --container-padding-x: #{rem(24)};
 
-  --section-padding-block: #{fluid(80, 40)};
+  --section-padding-block: #{fluid(80, 32)};
 
   --transition-duration: 0.2s;
   --transition-duration-longer: 0.4s;
+
+  @include tablet {
+    --container-padding-x: #{rem(12)};
+  }
 }

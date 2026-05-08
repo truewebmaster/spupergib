@@ -1,0 +1,23 @@
+@use "../helpers" as *;
+
+.content-tab {
+  border: var(--border-light);
+  border-radius: var(--border-radius-xl);
+  padding: fluid-to-laptop(50, 25);
+  box-shadow: var(--shadow);
+
+  @include mobile {
+    border-radius: var(--border-radius-m);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+    margin-bottom: fluid(25, 20);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+@use "../helpers" as *;
+
+.breadcrumbs {
+  font-size: rem(14);
+  color: var(--color-gray-50);
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.breadcrumb_last {
+  color: var(--color-gray-10);
+}
+
+.breadcrumbs span {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

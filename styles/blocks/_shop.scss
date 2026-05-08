@@ -1,0 +1,118 @@
+@use "../helpers" as *;
+
+.shop {
+  // &__inner {
+  //   display: grid;
+  //   grid-template-columns: rem(300) auto;
+  //   column-gap: rem(50);
+  //   margin-top: rem(50);
+  // }
+
+  &__toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: rem(16);
+    border-bottom: var(--border);
+    flex-wrap: wrap;
+    margin-bottom: rem(50);
+
+    &-left {
+      font-size: rem(14);
+      padding: rem(12) rem(16);
+      background-color: var(--color-gray-80);
+      border-radius: var(--border-radius-m);
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      column-gap: rem(20);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+  }
+
+  &__info-link {
+    font-size: rem(16);
+    color: var(--color-gray-10);
+    font-weight: 500;
+  }
+
+  &__info-icon {
+    width: rem(16);
+    height: rem(16);
+    stroke: var(--color-accent);
+    stroke-width: 1.3333;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__result-count {
+    font-size: rem(14);
+    color: var(--color-gray-50);
+  }
+
+  &__sort-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: none;
+    background: transparent;
+    padding-right: rem(20);
+
+    font-size: rem(14);
+    font-weight: 600;
+    color: var(--color-gray-10);
+
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__sort {
+    position: relative;
+    display: flex;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: rem(14);
+      height: rem(14);
+
+      transform: translateY(-50%);
+
+      background-color: var(--color-gray-40);
+
+      mask: url("../../icons/arrow-down.svg") no-repeat center / contain;
+
+      pointer-events: none;
+    }
+
+    &:hover .shop__sort-select {
+      color: var(--color-accent);
+    }
+
+    &:hover::after {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: var(--border);
+    margin-top: fluid(40, 20);
+    padding-block: fluid(40, 20);
+  }
+}

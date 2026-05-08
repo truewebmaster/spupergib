@@ -1,0 +1,43 @@
+@use "../helpers" as *;
+
+.individual-order {
+  display: grid;
+
+  &__title {
+    font-weight: 400;
+    margin-bottom: rem(10);
+    letter-spacing: rem(1);
+    line-height: 1.3;
+  }
+
+  &__description {
+    font-size: rem(14);
+    color: var(--color-gray-50);
+    line-height: 1.6;
+    margin-bottom: rem(35);
+  }
+
+  &__psevdo-link {
+    display: flex;
+    align-items: center;
+    column-gap: rem(4);
+    color: var(--color-orange-25);
+    font-size: rem(14);
+    transition-duration: var(--transition-duration-longer);
+
+    &::after {
+      @include square(rem(13));
+
+      content: "";
+      display: block;
+      background-image: url("../../icons/arrow-right-orange.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include hover {
+    .individual-order__psevdo-link {
+      color: var(--color-orange-30);
+    }
+  }
+}

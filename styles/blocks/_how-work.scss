@@ -1,0 +1,9 @@
+@use "../helpers" as *;
+
+.how-work {
+  &__title {
+    @include fluid-text(30, 24);
+    margin-bottom: fluid-to-laptop(35, 24);
+    font-weight: 600;
+  }
+}

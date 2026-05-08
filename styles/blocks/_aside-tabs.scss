@@ -1,0 +1,51 @@
+@use "../helpers" as *;
+
+.aside-tabs {
+  &__nav {
+    display: grid;
+    row-gap: rem(8);
+
+    @include tablet {
+      display: flex;
+      column-gap: rem(8);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(16, 8);
+    color: var(--color-gray-30);
+    font-size: fluid(18, 14);
+    font-weight: 500;
+    padding: fluid(20, 12) fluid(24, 16);
+    background-color: var(--color-gray-80);
+    border-radius: var(--border-radius-m);
+    border: none;
+
+    @include mobile {
+      border-radius: var(--border-radius-s);
+    }
+
+    @include hover {
+      color: var(--color-gray-15);
+      background-color: var(--color-gray-75);
+    }
+  }
+
+  & .is-active {
+    background-color: var(--color-orange-15);
+    color: var(--color-white);
+
+    .aside-tabs__icon {
+      color: var(--color-white);
+    }
+  }
+
+  &__icon {
+    @include square(rem(20));
+
+    color: var(--color-gray-50);
+  }
+}

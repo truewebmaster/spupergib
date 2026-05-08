@@ -1,0 +1,61 @@
+@use "../helpers" as *;
+
+.widget-title {
+  text-transform: uppercase;
+  color: var(--color-gray-50);
+  font-size: rem(12);
+  font-weight: 500;
+  letter-spacing: rem(1);
+  padding-left: rem(16);
+  margin-bottom: fluid-to-laptop(24, 18);
+}
+
+// PRODUCT-CATEGORYS
+
+.product-categories {
+  display: grid;
+  row-gap: rem(4);
+}
+
+.cat-item {
+  position: relative;
+  padding: rem(12) rem(16);
+  border-radius: var(--border-radius-s);
+  cursor: pointer;
+
+  & a {
+    text-decoration: none;
+    color: var(--color-gray-30);
+    font-weight: 500;
+    font-size: rem(14);
+  }
+
+  @include hover {
+    background-color: var(--color-gray-80);
+
+    a {
+      color: var(--color-gray-20);
+    }
+  }
+}
+
+.current-cat {
+  background-color: var(--color-orange-50);
+  pointer-events: none;
+
+  &::after {
+    @include square(rem(6));
+
+    content: "";
+    position: absolute;
+    right: rem(16);
+    inset-block: 0;
+    margin: auto;
+    border-radius: var(--border-radius-l);
+    background-color: var(--color-accent);
+  }
+
+  & a {
+    color: var(--color-accent);
+  }
+}

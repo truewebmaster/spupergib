@@ -1,0 +1,38 @@
+@use "../helpers" as *;
+
+.support-card {
+  --fontSizeDescription: #{rem(16)};
+
+  overflow: hidden;
+  padding: fluid-to-laptop(32, 28);
+  background-color: var(--color-gray-10);
+  color: var(--color-white);
+  border-radius: var(--border-radius-m);
+  align-self: start;
+  text-align: center;
+
+  &--aside {
+    --fontSizeDescription: #{rem(14)};
+  }
+
+  &__title {
+    color: var(--color-white);
+    margin-bottom: rem(12);
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: var(--fontSizeDescription);
+    color: var(--color-gray-50);
+    line-height: 1.6;
+    margin-bottom: rem(25);
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    max-width: rem(190);
+    margin: auto;
+  }
+}
