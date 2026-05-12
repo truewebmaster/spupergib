@@ -48,14 +48,14 @@ h1,
 
 h2,
 .h2 {
-  @include fluid-text(48, 36);
+  @include fluid-text(48, 30);
 
   line-height: 1.15;
 }
 
 h3,
 .h3 {
-  @include fluid-text(36, 30);
+  @include fluid-text(36, 28);
   line-height: 1.2;
 }
 
@@ -114,11 +114,11 @@ blockquote {
   padding-top: rem(20);
 }
 
-// .header,
-// .footer {
-// 	display: none !important;
-// }
+.header,
+.footer {
+  display: none !important;
+}
 
-// main>section:not(:last-child) {
-// 	display: none !important;
-// }
+main > section:not(:last-child) {
+  display: none !important;
+}

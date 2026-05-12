@@ -3,7 +3,29 @@
 .page-header {
   display: grid;
   row-gap: fluid-to-laptop(18, 12);
-  margin-block: rem(30);
+  margin-block: fluid(30, 15);
+
+  &__link-back {
+    display: inline-flex;
+    align-items: center;
+    justify-self: start;
+    column-gap: rem(8);
+    color: var(--color-gray-50);
+    font-size: rem(14);
+    font-weight: 500;
+    padding-top: fluid(10, 6);
+    padding-bottom: fluid(24, 12);
+
+    &-icon {
+      @include square(rem(16));
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(24, 16);
+  }
 
   &__title {
     font-weight: 600;
@@ -11,5 +33,16 @@
 
   &__description {
     max-width: rem(675);
+    color: var(--color-gray-40);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: fluid(24, 12);
   }
 }

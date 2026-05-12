@@ -46,6 +46,12 @@
     }
   }
 
+  &--banner {
+    font-size: rem(16);
+    font-weight: 500;
+    padding: fluid-to-laptop(10, 8) fluid-to-laptop(30, 26);
+  }
+
   &--accent {
     color: var(--color-white);
     background-color: var(--color-accent);

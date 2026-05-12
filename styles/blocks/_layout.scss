@@ -1,26 +1,58 @@
 @use "../helpers" as *;
 
 .layout {
-  --gapDivided: #{fluid-to-laptop(100, 50)};
-  --gapDividedScale: #{fluid-to-laptop(50, 25)};
+  --gapDivided: #{fluid(100, 60)};
+  --gapDividedScale: #{fluid(50, 30)};
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(32, 24);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
 
   &--left-aside {
     display: grid;
     grid-template-columns: rem(280) auto;
-    grid-template-areas: "aside content";
+    grid-template-areas: "aside-left content";
     column-gap: rem(50);
 
     @include mobile {
       grid-template-columns: 1fr;
       grid-template-areas:
-        "aside"
+        "aside-left"
         "content";
       row-gap: rem(50);
     }
   }
 
-  .layout__aside {
-    grid-area: aside;
+  &--left-right-aside {
+    display: grid;
+    grid-template-columns: rem(280) auto rem(280);
+    grid-template-areas: "aside-left content aside-right";
+    column-gap: rem(50);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "aside-left"
+        "content"
+        "aside-right";
+      row-gap: rem(50);
+    }
+  }
+
+  &__aside {
+    &--left {
+      grid-area: aside-left;
+    }
+
+    &--right {
+      grid-area: aside-right;
+    }
   }
 
   .layout__content {
@@ -31,11 +63,11 @@
     @include mobile {
       grid-template-areas:
         "content"
-        "aside";
+        "aside-left";
     }
   }
 
-  &--aside-divided {
+  &--aside-left-divided {
     @include mobile-above {
       column-gap: var(--gapDivided);
       position: relative;
@@ -52,17 +84,39 @@
     }
   }
 
-  &--aside-big {
+  &--aside-left-big {
     grid-template-columns: rem(360) auto;
+  }
+
+  &--aside-right-big {
+    grid-template-columns: auto rem(360);
   }
 
   &--tablet-collapse {
     @include tablet {
       grid-template-columns: 1fr;
       grid-template-areas:
-        "aside"
+        "aside-left"
         "content";
-      row-gap: rem(10);
+      row-gap: rem(20);
+    }
+  }
+
+  &--tablet-collapse-right-aside {
+    @include tablet-s {
+      grid-template-columns: 17.5rem auto;
+      grid-template-areas:
+        "aside-left content"
+        "aside-left aside-right";
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "content"
+        "aside-right"
+        "aside-left";
     }
   }
 }

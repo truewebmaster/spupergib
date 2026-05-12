@@ -1,27 +1,53 @@
 @use "../helpers" as *;
 
 .content {
-	--space-lg: #{rem(40)}; // h2
-	--space-md: #{rem(32)}; // h3, h4
-	--space-sm: #{rem(16)}; // flow + h5/h6
+  --space-lg: #{rem(40)}; // h2
+  --space-md: #{rem(32)}; // h3, h4
+  --space-sm: #{rem(16)}; // flow + h5/h6
+
+  & h2 {
+    @include fluid-text(24, 20);
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  & h3 {
+    @include fluid-text(20, 18);
+    font-weight: 600;
+  }
 }
 
 /* базовый ритм */
-.content>*+* {
-	margin-top: var(--space-sm);
+.content > * + * {
+  margin-top: var(--space-sm);
 }
 
 /* иерархия заголовков */
-.content>*+h2 {
-	margin-top: var(--space-lg);
+.content > * + h2 {
+  margin-top: var(--space-lg);
 }
 
-.content>*+h3,
-.content>*+h4 {
-	margin-top: var(--space-md);
+.content > * + h3,
+.content > * + h4 {
+  margin-top: var(--space-md);
 }
 
-.content>*+h5,
-.content>*+h6 {
-	margin-top: var(--space-sm);
+.content > * + h5,
+.content > * + h6 {
+  margin-top: var(--space-sm);
+}
+
+.content ul {
+  list-style: disc;
+  padding-left: 1.25em;
+  font-size: fluid(18, 16);
+  color: var(--color-gray-20);
+}
+
+.content ul li::marker {
+  color: var(--color-orange-15);
+}
+
+.content ul li + li {
+  margin-top: rem(16);
 }

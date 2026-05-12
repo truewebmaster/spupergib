@@ -24,16 +24,34 @@
     --size: #{rem(36)};
   }
 
-  &--width-48 {
-    --size: #{rem(48)};
-  }
-
   &--width-40 {
     --size: #{rem(40)};
   }
 
+  &--width-48 {
+    --size: #{rem(48)};
+  }
+
   &--width-56 {
     --size: #{rem(56)};
+  }
+
+  &--width-80 {
+    --size: #{fluid(80, 64)};
+  }
+
+  &--button {
+    color: var(--color-gray-50);
+    border: var(--border);
+
+    & svg {
+      @include square(rem(16));
+    }
+
+    @include hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
   }
 
   &--color-gray {

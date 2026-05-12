@@ -1,0 +1,23 @@
+@use "../helpers" as *;
+
+.blog {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(32, 24);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.blog-info {
+  display: flex;
+  column-gap: rem(16);
+}
+
+.blog-actions {
+  display: flex;
+  column-gap: rem(8);
+}

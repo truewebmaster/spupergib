@@ -1,13 +1,6 @@
 @use "../helpers" as *;
 
 .shop {
-  // &__inner {
-  //   display: grid;
-  //   grid-template-columns: rem(300) auto;
-  //   column-gap: rem(50);
-  //   margin-top: rem(50);
-  // }
-
   &__toolbar {
     display: flex;
     align-items: center;
@@ -16,19 +9,28 @@
     padding-bottom: rem(16);
     border-bottom: var(--border);
     flex-wrap: wrap;
-    margin-bottom: rem(50);
+    margin-bottom: fluid(50, 20);
 
     &-left {
       font-size: rem(14);
       padding: rem(12) rem(16);
       background-color: var(--color-gray-80);
       border-radius: var(--border-radius-m);
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &-right {
       display: flex;
       align-items: center;
       column-gap: rem(20);
+
+      @include mobile {
+        width: 100%;
+        justify-content: space-between;
+      }
     }
   }
 
@@ -36,6 +38,28 @@
     display: flex;
     align-items: center;
     column-gap: rem(12);
+
+    @include mobile {
+      justify-content: space-between;
+      font-size: rem(12);
+    }
+  }
+
+  &__info-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+    min-width: 0;
+  }
+
+  &__info-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__info-icon {
+    flex-shrink: 0;
   }
 
   &__info-link {
@@ -56,6 +80,10 @@
   &__result-count {
     font-size: rem(14);
     color: var(--color-gray-50);
+
+    @include mobile {
+      font-size: rem(12);
+    }
   }
 
   &__sort-select {
@@ -81,6 +109,10 @@
   &__sort {
     position: relative;
     display: flex;
+
+    @include mobile {
+      font-size: rem(12);
+    }
 
     &::after {
       content: "";

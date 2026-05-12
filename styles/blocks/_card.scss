@@ -1,6 +1,6 @@
 @use "../helpers" as *;
 
-.service-card {
+.card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -21,7 +21,7 @@
   @include hover {
     box-shadow: var(--shadow);
 
-    .service-card__image {
+    .card__image {
       scale: 1.1;
     }
   }
@@ -39,6 +39,7 @@
   }
 
   &__wrapper-image {
+    position: relative;
     overflow: hidden;
     flex-shrink: 0;
 
@@ -71,6 +72,13 @@
     }
   }
 
+  &__badge {
+    position: absolute;
+    top: rem(24);
+    left: rem(24);
+    z-index: 1;
+  }
+
   &__icon {
     margin-bottom: rem(24);
 
@@ -79,13 +87,18 @@
     }
   }
 
-  &__title {
-    margin-bottom: rem(16);
+  &__body {
+    display: grid;
+    row-gap: rem(16);
+  }
+
+  &__date {
   }
 
   &__link {
     color: var(--color-gray-10);
     font-size: 14px;
     font-weight: 500;
+    justify-content: start;
   }
 }

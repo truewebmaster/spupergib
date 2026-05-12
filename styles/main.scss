@@ -35,7 +35,7 @@
 @use "blocks/widget";
 @use "blocks/individual-order";
 @use "blocks/product-card";
-@use "blocks/service-card";
+@use "blocks/card";
 @use "blocks/service";
 @use "blocks/page-header";
 @use "blocks/layout";
@@ -44,3 +44,6 @@
 @use "blocks/aside-tabs";
 @use "blocks/content-tab";
 @use "blocks/support-card";
+@use "blocks/blog";
+@use "blocks/date";
+@use "blocks/popup-order";

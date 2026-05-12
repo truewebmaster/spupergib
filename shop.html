@@ -120,21 +120,23 @@
           <div class="shop__toolbar">
             <div class="shop__toolbar-left">
               <div class="shop__info">
-                <svg
-                  class="shop__info-icon"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.3333 8 1.3333C4.3181 1.3333 1.3333 4.3181 1.3333 8C1.3333 11.6819 4.3181 14.6667 8 14.6667Z"
-                  />
-                  <path d="M8 10.6667V8" />
-                  <path d="M8 5.3333H8.0067" />
-                </svg>
-                <span class="shop__info-text"
-                  >Условия оплаты, доставки и возврата</span
-                >
+                <div class="shop__info-wrap">
+                  <svg
+                    class="shop__info-icon"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.3333 8 1.3333C4.3181 1.3333 1.3333 4.3181 1.3333 8C1.3333 11.6819 4.3181 14.6667 8 14.6667Z"
+                    />
+                    <path d="M8 10.6667V8" />
+                    <path d="M8 5.3333H8.0067" />
+                  </svg>
+                  <span class="shop__info-text"
+                    >Условия оплаты, доставки и возврата</span
+                  >
+                </div>
                 <a href="#" class="shop__info-link">Подробнее</a>
               </div>
             </div>
@@ -157,10 +159,9 @@
           </div>
 
           <div class="layout layout--left-aside">
-            <!-- Sidebar -->
-            <aside class="aside layout__aside">
+            <aside class="aside layout__aside layout__aside--left">
               <div class="aside__inner aside__inner--sticky">
-                <div class="aside__card">
+                <div class="aside__card aside__card--mini">
                   <h2 class="widget-title">Категории</h2>
                   <ul class="product-categories">
                     <li class="cat-item current-cat">

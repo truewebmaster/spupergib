@@ -1,0 +1,36 @@
+@use "../helpers" as *;
+
+.popup-order {
+  max-width: rem(448);
+  padding: rem(32);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-xl);
+
+  &__body {
+    display: grid;
+    row-gap: rem(32);
+  }
+  &__header {
+    display: grid;
+    row-gap: rem(8);
+  }
+
+  &__form {
+    display: grid;
+    row-gap: rem(16);
+  }
+
+  &__description {
+    font-size: rem(14);
+    color: var(--color-gray-40);
+  }
+
+  &__button {
+    margin-top: rem(24);
+  }
+
+  & .form {
+    padding: 0;
+    background-color: transparent;
+  }
+}

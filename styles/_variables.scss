@@ -50,12 +50,16 @@
       $container-laptop-width
     )};
 
-  --container-padding-x: #{rem(24)};
+  --container-padding-x: #{rem(32)};
 
   --section-padding-block: #{fluid(80, 32)};
 
   --transition-duration: 0.2s;
   --transition-duration-longer: 0.4s;
+
+  @include laptop {
+    --container-padding-x: #{rem(24)};
+  }
 
   @include tablet {
     --container-padding-x: #{rem(12)};

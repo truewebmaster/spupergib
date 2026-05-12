@@ -1180,5 +1180,55 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup-order">
+      <div class="popup-order__body">
+        <header class="popup-order__header">
+          <h2 class="popup-order__title h4">Индивидуальный заказ</h2>
+
+          <div class="popup-order__description">
+            <p>
+              Оставьте свои контакты, и наш менеджер свяжется с вами для
+              уточнения деталей.
+            </p>
+          </div>
+        </header>
+
+        <form class="popup-order__form form" action="/" method="post">
+          <div class="form__group">
+            <label class="form__label" for="popup-name"> Ваше имя </label>
+
+            <input
+              class="form__input"
+              id="popup-name"
+              type="text"
+              name="name"
+              placeholder="Иван Иванов"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="popup-phone"> Ваш телефон </label>
+
+            <input
+              class="form__input"
+              id="popup-phone"
+              type="tel"
+              name="phone"
+              placeholder="+7 (___) ___ - __ - __"
+              autocomplete="tel"
+            />
+          </div>
+
+          <button
+            class="button button--orange popup-order__button"
+            type="submit"
+          >
+            <span class="button__label">Отправить заявку</span>
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperGib | Услуга</title>
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__body">
+        <div class="header__body-inner container">
+          <a href="/" class="header__logo logo" title="Главная">
+            <img
+              src="./img/logo.svg"
+              alt=""
+              class="logo__image"
+              width="250"
+              height="36"
+            />
+          </a>
+          <a
+            class="header__action-phone header__action-phone--logo"
+            href="tel:+79255638484"
+            >+7 (925) 563-84-84</a
+          >
+
+          <div class="header__overlay" data-js-header-overlay>
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="./index.html" class="header__menu-link is-active"
+                    >Каталог</a
+                  >
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Радиусные элементы</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Вытяжки</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Короба</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="header__menu-link">Отливы</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__action">
+              <div class="header__action-info">
+                <a class="header__action-phone" href="tel:+79255638484"
+                  >+7 (925) 563-84-84</a
+                >
+                <div class="header__action-time-work">
+                  Ежедневно 9:00 - 20:00
+                </div>
+              </div>
+              <a href="#" class="header__contact-us-link button button--accent"
+                >Заказать звонок</a
+              >
+            </div>
+          </div>
+
+          <div class="header__mob-action visible-tablet">
+            <a
+              href="tel:+79255638484"
+              class="header__contact-us-link button button--accent button--phone"
+              ><img src="./icons/phone.svg" alt="Позвонить"
+            /></a>
+            <button
+              class="burger-button"
+              type="button"
+              aria-label="Открыть меню"
+              title="Open menu"
+              data-js-header-burger-button
+            >
+              <svg
+                class="burger-button__svg"
+                width="30"
+                height="30"
+                viewBox="0 0 100 100"
+              >
+                <path
+                  class="burger-button__line burger-button__line--1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path
+                  class="burger-button__line burger-button__line--2"
+                  d="M 20,50 H 80"
+                />
+                <path
+                  class="burger-button__line burger-button__line--3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <header class="page-header">
+          <nav class="breadcrumbs">
+            <span>
+              <a href="/">Главная</a> » <a href="/service.html">Услуги</a> »
+              <span class="breadcrumb_last" aria-current="page"
+                >Лазерная резка металла</span
+              >
+            </span>
+          </nav>
+
+          <a href="/service.html" class="page-header__link-back">
+            <svg
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              class="page-header__link-back-icon"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 12.667 3.333 8 8 3.333M12.667 8H3.333"
+                stroke="currentColor"
+                stroke-width="1.333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="page-header__link-back-label"
+              >Назад ко всем услугам</span
+            >
+          </a>
+
+          <div class="page-header__title-wrapper">
+            <div class="page-header__icon icon icon--cub icon--width-80">
+              <img
+                src="./icons/service/icon-1.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h1 class="page-header__title h2">Лазерная резка металла</h1>
+          </div>
+        </header>
+
+        <section class="section section--page-first">
+          <div
+            class="layout layout--left-right-aside layout--aside-left-divided layout--tablet-collapse-right-aside"
+          >
+            <aside class="aside layout__aside--left">
+              <div class="aside__inner aside__inner--sticky">
+                <div class="widget-production">
+                  <h2 class="widget-production__title h4">Производство</h2>
+                  <ul class="widget-production__list">
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Вытяжки для кухни
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Короба для вытяжек
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Вытяжки для гриля
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Дизайнерские вытяжки
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Вытяжки для мангала
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Вытяжки для барбекю
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Каминные вытяжки
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Радиусные элементы
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Отливы для окон
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="widget-production__item">
+                      <a href="/" class="widget-production__link">
+                        <span class="widget-production__label">
+                          Отливы для цоколя дома
+                        </span>
+                        <svg
+                          width="6"
+                          height="10"
+                          viewBox="0 0 6 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          class="widget-production__icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M1 1L5 5L1 9"
+                            stroke="currentColor"
+                            stroke-width="1.333"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="aside__card aside__card--decor aside__card--banner-dark"
+                >
+                  <div class="individual-order">
+                    <h2 class="individual-order__title h5">
+                      Узнайте стоимость!
+                    </h2>
+                    <div class="individual-order__description">
+                      <p>
+                        Всего в несколько шагов Вы сможете узнать стоимость
+                        интересующего Вас изделия.
+                      </p>
+                    </div>
+                    <a href="/" class="button button--opacity-white">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="button__icon button__icon--accent"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M12 1H4C3.26 1 2.67 1.59 2.67 2.33V13.67C2.67 14.41 3.26 15 4 15H12C12.74 15 13.33 14.41 13.33 13.67V2.33C13.33 1.59 12.74 1 12 1Z"
+                          stroke="currentColor"
+                          stroke-width="1.33"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+
+                        <path
+                          d="M5.33 4H10.67"
+                          stroke="currentColor"
+                          stroke-width="1.33"
+                          stroke-linecap="round"
+                        />
+
+                        <path
+                          d="M10.67 9.33V12"
+                          stroke="currentColor"
+                          stroke-width="1.33"
+                          stroke-linecap="round"
+                        />
+
+                        <circle
+                          cx="5.33"
+                          cy="6.67"
+                          r="0.35"
+                          fill="currentColor"
+                        />
+                        <circle cx="8" cy="6.67" r="0.35" fill="currentColor" />
+                        <circle
+                          cx="10.67"
+                          cy="6.67"
+                          r="0.35"
+                          fill="currentColor"
+                        />
+
+                        <circle
+                          cx="5.33"
+                          cy="9.33"
+                          r="0.35"
+                          fill="currentColor"
+                        />
+                        <circle cx="8" cy="9.33" r="0.35" fill="currentColor" />
+
+                        <circle
+                          cx="5.33"
+                          cy="12"
+                          r="0.35"
+                          fill="currentColor"
+                        />
+                        <circle cx="8" cy="12" r="0.35" fill="currentColor" />
+                      </svg>
+                      <span class="button__label">Онлайн расчет</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <div class="layout__content content">
+              <p>
+                Мы предоставляем услуги высокоточной лазерной резки листового
+                металла. Благодаря современным лазерным комплексам мы добиваемся
+                идеального качества кромки, которая в большинстве случаев не
+                требует дополнительной механической обработки. Лазерный луч
+                позволяет кроить металл по сложным контурам с филигранной
+                точностью.
+              </p>
+              <h2>Преимущества работы с нами</h2>
+              <ul>
+                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
+                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
+                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
+                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
+                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
+              </ul>
+              <h2>Обрабатываемые материалы</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+                voluptatibus magnam nemo tenetur impedit enim. Nesciunt vitae
+                amet aspernatur voluptate facilis consectetur reprehenderit sed?
+                Nam eius reiciendis minus doloremque laboriosam!
+              </p>
+              <h3>Высокая точность реза</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores deleniti, tenetur velit maxime in rerum dicta?
+                Praesentium aspernatur nesciunt, qui quidem placeat suscipit,
+                ratione corrupti tenetur consequatur iste deleniti numquam.
+              </p>
+            </div>
+            <aside class="aside layout__aside--right">
+              <div class="aside__inner">
+                <div class="aside__image-banner">
+                  <img
+                    src="./img/service/image-1.jpg"
+                    alt=""
+                    width="318"
+                    height="398"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div
+                  class="aside__card aside__card--decor aside__card--banner-orange"
+                >
+                  <div class="individual-order">
+                    <h2 class="individual-order__title h5">
+                      Оставить заявку на расчет
+                    </h2>
+                    <div class="individual-order__description">
+                      <p>
+                        Пришлите нам чертежи, эскизы или техническое задание, и
+                        мы бесплатно произведем расчет стоимости изготовления в
+                        кратчайшие сроки.
+                      </p>
+                    </div>
+                    <a href="/" class="button button--banner">
+                      <span class="button__label">Связаться с нами</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__body">
+        <div class="footer__body-inner container">
+          <div class="footer__info">
+            <h2 class="footer__title h3">Контакты</h2>
+            <div class="footer__description">
+              <p>
+                Мы всегда открыты для новых проектов и готовы ответить на любые
+                ваши вопросы.
+              </p>
+            </div>
+            <div class="footer__contact">
+              <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                  <div class="icon icon--color-gray">
+                    <img
+                      src="./icons/footer/icon-1.svg"
+                      alt="Телефон"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="footer__contact-item-info">
+                    <h3 class="h5 footer__contact-item-title">Позвоните нам</h3>
+                    <div class="footer__contact-item-description">
+                      Мы на связи ежедневно
+                    </div>
+                    <a
+                      class="footer__contact-item-phone"
+                      href="tel:+79525638484"
+                      >+7 (952) 563-84-84</a
+                    >
+                  </div>
+                </li>
+                <li class="footer__contact-item">
+                  <div class="icon icon--color-gray">
+                    <img
+                      src="./icons/footer/icon-2.svg"
+                      alt="Почта"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="footer__contact-item-info">
+                    <h3 class="h5 footer__contact-item-title">Напишите нам</h3>
+                    <div class="footer__contact-item-description">
+                      Присылайте чертежи на расчет
+                    </div>
+                    <a
+                      class="footer__contact-item-email"
+                      href="mailto:info@supergib.ru"
+                      >info@supergib.ru</a
+                    >
+                  </div>
+                </li>
+                <li class="footer__contact-item">
+                  <div class="icon icon--color-gray">
+                    <img
+                      src="./icons/footer/icon-3.svg"
+                      alt="Адрес"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="footer__contact-item-info">
+                    <h3 class="h5 footer__contact-item-title">Напишите нам</h3>
+                    <div class="footer__contact-item-adress">
+                      г. Москва, ул. Производственная, д. 1 (м. Юго-Западная)
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__form">
+            <form
+              class="form form--request"
+              action="#"
+              method="post"
+              novalidate
+            >
+              <div class="form__inner">
+                <h2 class="form__title h4">Оставить заявку</h2>
+
+                <!-- Два поля в ряд -->
+                <div class="form__row form__row--cols-2">
+                  <div class="form__field">
+                    <label class="form__label" for="name">Ваше имя</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Иван"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="phone">Телефон</label>
+                    <input
+                      class="form__input"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="+7 (___) ___-__-__"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Комментарий -->
+                <div class="form__field">
+                  <label class="form__label" for="comment">Комментарий</label>
+                  <textarea
+                    class="form__textarea"
+                    id="comment"
+                    name="comment"
+                    placeholder="Опишите задачу или прикрепите ссылку на чертеж..."
+                    rows="4"
+                  ></textarea>
+                </div>
+
+                <!-- Кнопка -->
+                <div class="form__actions">
+                  <button class="form__submit" type="submit">
+                    <span>Отправить</span
+                    ><img
+                      src="/icons/mail.svg"
+                      width="16"
+                      height="16"
+                      loading="lazy"
+                      alt="Отправить"
+                    />
+                  </button>
+                </div>
+
+                <!-- Текст под кнопкой -->
+                <div class="form__privacy">
+                  Ваши данные под надежной защитой
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner container">
+          <a href="/" class="footer__logo logo" title="Главная">
+            <img
+              src="./img/logo.svg"
+              alt=""
+              class="logo__image"
+              width="250"
+              height="36"
+            />
+          </a>
+          <div class="footer__bottom-private">
+            <p>© 2026 SUPERGIB. Все права защищены.</p>
+          </div>
+          <div class="footer__bottom-soc1als">
+            <a href="/" class="icon icon--color-gray icon--active">
+              <img
+                src="./icons/footer/icon-3.svg"
+                alt="Адрес"
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </a>
+            <a href="/" class="icon icon--color-gray icon--active">
+              <img
+                src="./icons/footer/icon-3.svg"
+                alt="Адрес"
+                width="20"
+                height="20"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

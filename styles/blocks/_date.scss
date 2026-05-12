@@ -1,0 +1,7 @@
+@use "../helpers" as *;
+.date {
+  display: flex;
+  column-gap: rem(8);
+  align-items: center;
+  color: var(--color-gray-50);
+}

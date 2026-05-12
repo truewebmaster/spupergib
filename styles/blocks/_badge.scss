@@ -17,6 +17,22 @@
     border: none;
   }
 
+  &--gray {
+    border: none;
+    background-color: var(--color-gray-75);
+    border-radius: var(--border-radius-s);
+    color: var(--color-gray-30);
+  }
+
+  &--white {
+    border: none;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-s);
+    color: var(--color-gray-10);
+    padding: rem(8) rem(14);
+    font-weight: 500;
+  }
+
   &--circl {
     &::before {
       content: "";
