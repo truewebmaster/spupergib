@@ -1,0 +1,87 @@
+@use "../helpers" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: grid;
+  place-items: center;
+
+  padding: rem(20);
+
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: visibility var(--transition-duration);
+
+  &.is-active {
+    visibility: visible;
+    pointer-events: auto;
+
+    .modal__overlay {
+      opacity: 1;
+      backdrop-filter: blur(8px);
+    }
+
+    .modal__window {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+
+    background-color: rgb(15 23 42 / 0.45);
+
+    backdrop-filter: blur(0px);
+    opacity: 0;
+
+    will-change: backdrop-filter, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+
+    transition:
+      opacity var(--transition-duration),
+      backdrop-filter var(--transition-duration);
+  }
+
+  &__window {
+    position: relative;
+    z-index: 1;
+
+    max-height: 100%;
+
+    overflow-y: auto;
+
+    opacity: 0;
+    transform: translateY(rem(20));
+
+    will-change: transform, opacity;
+
+    transition:
+      opacity var(--transition-duration),
+      transform var(--transition-duration);
+  }
+
+  &__close {
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    padding: 0;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    @include square(rem(40));
+  }
+}

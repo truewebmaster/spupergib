@@ -1,0 +1,64 @@
+@use "../helpers" as *;
+
+.contacts {
+  &__inner {
+    display: grid;
+    grid-template-columns: 35% auto;
+    column-gap: fluid-to-laptop(48, 30);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: rem(32);
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: fluid-to-laptop(32, 28);
+    padding: fluid-to-laptop(42, 20);
+    background-color: var(--color-gray-80);
+    border-radius: var(--border-radius-xl);
+
+    @include tablet {
+      border-radius: var(--border-radius-s);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: fluid(32, 18);
+  }
+
+  &__item {
+    display: flex;
+    column-gap: rem(16);
+  }
+
+  &__item-title {
+    margin-bottom: rem(3);
+    font-size: rem(14);
+    font-weight: 400;
+    color: var(--color-gray-50);
+  }
+
+  &__item-text {
+    font-size: fluid(18, 16);
+    font-weight: 500;
+    color: var(--color-gray-10);
+    max-width: rem(190);
+  }
+
+  &__map {
+    min-height: rem(300);
+    background-color: var(--color-gray-70);
+    border-radius: var(--border-radius-xl);
+
+    @include tablet {
+      border-radius: var(--border-radius-s);
+    }
+  }
+}

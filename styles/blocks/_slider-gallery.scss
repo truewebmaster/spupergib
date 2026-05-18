@@ -1,0 +1,48 @@
+@use "../helpers" as *;
+
+.slider-gallery {
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(25);
+    column-gap: rem(20);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: rem(16);
+    min-width: 0;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(5);
+      align-items: start;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    min-width: 0;
+  }
+
+  &__all-work {
+    display: flex;
+    align-items: center;
+    color: var(--color-accent);
+    font-size: rem(14);
+    font-weight: 600;
+    column-gap: rem(8);
+    white-space: nowrap;
+    & span {
+      border-bottom: 1px dashed currentColor;
+    }
+
+    @include hover {
+      color: var(--color-orange-10);
+    }
+  }
+}

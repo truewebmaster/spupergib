@@ -1,16 +1,26 @@
 @use "../helpers" as *;
 
 .guide {
+  &__inner {
+    display: grid;
+    grid-template-columns: 30% auto;
+    column-gap: fluid-to-laptop(80, 60);
 
-	&__inner {
-		display: grid;
-		grid-template-columns: 30% auto;
-		column-gap: fluid-to-laptop(80, 60);
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: rem(50);
+    }
+  }
+  & h3 {
+    &.h5 {
+      font-weight: 700;
+    }
+  }
 
-		@include tablet {
-			grid-template-columns: 1fr;
-			row-gap: rem(50);
-		}
-	}
-
+  &__title {
+    &.h3 {
+      font-size: rem(30);
+      font-weight: 700;
+    }
+  }
 }

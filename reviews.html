@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SuperGib | Услуга</title>
+    <title>SuperGib | Отзывы</title>
 
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
+
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/swiper-init.js"></script>
     <script src="./js/main.js" type="module"></script>
   </head>
 
@@ -112,54 +116,22 @@
         <header class="page-header">
           <nav class="breadcrumbs">
             <span>
-              <a href="/">Главная</a> » <a href="/service.html">Услуги</a> »
-              <span class="breadcrumb_last" aria-current="page"
-                >Лазерная резка металла</span
-              >
+              <a href="/">Главная</a> »
+              <span class="breadcrumb_last" aria-current="page">Отзывы</span>
             </span>
           </nav>
 
-          <a href="/service.html" class="page-header__link-back">
-            <svg
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              class="page-header__link-back-icon"
-              aria-hidden="true"
-            >
-              <path
-                d="M8 12.667 3.333 8 8 3.333M12.667 8H3.333"
-                stroke="currentColor"
-                stroke-width="1.333"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span class="page-header__link-back-label"
-              >Назад ко всем услугам</span
-            >
-          </a>
-
-          <div class="page-header__title-wrapper">
-            <div class="page-header__icon icon icon--cub icon--width-80">
-              <img
-                src="./icons/service/icon-1.svg"
-                alt=""
-                width="32"
-                height="32"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <h1 class="page-header__title h2">Лазерная резка металла</h1>
-          </div>
+          <h1 class="page-header__title h2">Отзывы</h1>
         </header>
 
-        <section class="section section--page-first">
+        <section class="section reviews" aria-labelledby="reviews-title">
+          <h2 class="reviews__title visually-hidden" id="reviews-title">
+            Отзывы о наших работах
+          </h2>
           <div
-            class="layout layout--left-right-aside layout--aside-left-divided layout--tablet-collapse-right-aside"
+            class="layout layout--reverse-mobile layout--left-aside layout--aside-left-divided"
           >
-            <aside class="aside layout__aside--left">
+            <aside class="aside layout__aside layout__aside--left">
               <div class="aside__inner aside__inner--sticky">
                 <div class="widget-production">
                   <h2 class="widget-production__title h4">Производство</h2>
@@ -420,10 +392,7 @@
                         интересующего Вас изделия.
                       </p>
                     </div>
-                    <a
-                      href="#contact-footer"
-                      class="button button--opacity-white"
-                    >
+                    <a href="/" class="button button--opacity-white">
                       <svg
                         width="16"
                         height="16"
@@ -491,71 +460,230 @@
                 </div>
               </div>
             </aside>
-            <div class="layout__content content">
-              <p>
-                Мы предоставляем услуги высокоточной лазерной резки листового
-                металла. Благодаря современным лазерным комплексам мы добиваемся
-                идеального качества кромки, которая в большинстве случаев не
-                требует дополнительной механической обработки. Лазерный луч
-                позволяет кроить металл по сложным контурам с филигранной
-                точностью.
-              </p>
-              <h2>Преимущества работы с нами</h2>
-              <ul>
-                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
-                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
-                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
-                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
-                <li>Высокая точность реза (погрешность до 0.1 мм)</li>
-              </ul>
-              <h2>Обрабатываемые материалы</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
-                voluptatibus magnam nemo tenetur impedit enim. Nesciunt vitae
-                amet aspernatur voluptate facilis consectetur reprehenderit sed?
-                Nam eius reiciendis minus doloremque laboriosam!
-              </p>
-              <h3>Высокая точность реза</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores deleniti, tenetur velit maxime in rerum dicta?
-                Praesentium aspernatur nesciunt, qui quidem placeat suscipit,
-                ratione corrupti tenetur consequatur iste deleniti numquam.
-              </p>
-            </div>
-            <aside class="aside layout__aside--right">
-              <div class="aside__inner">
-                <div class="aside__image-banner">
-                  <img
-                    src="./img/service/image-1.jpg"
-                    alt=""
-                    width="318"
-                    height="398"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div
-                  class="aside__card aside__card--decor aside__card--banner-orange"
-                >
-                  <div class="individual-order">
-                    <h2 class="individual-order__title h5">
-                      Оставить заявку на расчет
-                    </h2>
-                    <div class="individual-order__description">
-                      <p>
-                        Пришлите нам чертежи, эскизы или техническое задание, и
-                        мы бесплатно произведем расчет стоимости изготовления в
-                        кратчайшие сроки.
-                      </p>
-                    </div>
-                    <a href="#contact-footer" class="button button--banner">
-                      <span class="button__label">Связаться с нами</span>
-                    </a>
+            <div class="layout__content layout__content--gallery">
+              <div class="slider-reviews" data-js-slider>
+                <header class="slider-reviews__header">
+                  <div class="slider-navigation">
+                    <button
+                      class="icon icon--color-white icon--width-40 icon--button slider-btn icon--left"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="page-header__link-back-icon"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M8 12.667 3.333 8 8 3.333M12.667 8H3.333"
+                          stroke="currentColor"
+                          stroke-width="1.333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="icon icon--color-white icon--width-40 icon--button slider-btn icon--right"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="page-header__link-back-icon"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M8 12.667 3.333 8 8 3.333M12.667 8H3.333"
+                          stroke="currentColor"
+                          stroke-width="1.333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
                   </div>
+                </header>
+
+                <div class="swiper js-slider js-slider--reviews">
+                  <ul class="swiper-wrapper slider-reviews__list">
+                    <li class="swiper-slide slider-reviews__item">
+                      <article class="reviews-card">
+                        <div class="reviews-card__img-block">
+                          <img
+                            src="img/catalog/image-1.jpg"
+                            alt=""
+                            class="reviews-card__img"
+                            width="120"
+                            height="120"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="reviews-card__content">
+                          <h3 class="reviews-card__title h4">
+                            Максим
+                            <span class="reviews-card__location"
+                              >пос. Ядрошино</span
+                            >
+                          </h3>
+                          <div class="reviews-card__badge badge badge--gray">
+                            Вытяжка для мангала
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Вытяжка для мангала сделана качественно и
+                              добротно! Спасибо большое за чеканку на медном
+                              поясе получилась очень красивая беседка! Всё
+                              получилось отлично, как мы и хотели. Особенно
+                              порадовала цена и сроки, сделали за 10 дней. Всё
+                              сделали качественно и в срок. Буду рекомендовать
+                              вас друзьям.
+                            </p>
+                          </div>
+                          <audio
+                            class="reviews-card__audio"
+                            controls
+                            preload="none"
+                          >
+                            <source
+                              src="/uploads/review.mp3"
+                              type="audio/mpeg"
+                            />
+                          </audio>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="swiper-slide slider-reviews__item">
+                      <article class="reviews-card">
+                        <div class="reviews-card__img-block">
+                          <img
+                            src="img/catalog/image-2.jpg"
+                            alt=""
+                            class="reviews-card__img"
+                            width="120"
+                            height="120"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="reviews-card__content">
+                          <h3 class="reviews-card__title h4">
+                            Александр
+                            <span class="reviews-card__location"
+                              >дер. Крутая</span
+                            >
+                          </h3>
+                          <div class="reviews-card__badge badge badge--gray">
+                            Вытяжка для мангала
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Вытяжка для мангала сделана качественно и
+                              добротно! Спасибо большое за чеканку на медном
+                              поясе получилась очень красивая беседка! Всё
+                              получилось отлично, как мы и хотели. Особенно
+                              порадовала цена и сроки, сделали за 10 дней. Всё
+                              сделали качественно и в срок. Буду рекомендовать
+                              вас друзьям.
+                            </p>
+                          </div>
+                          <audio
+                            class="reviews-card__audio"
+                            controls
+                            preload="none"
+                          >
+                            <source
+                              src="/uploads/review.mp3"
+                              type="audio/mpeg"
+                            />
+                          </audio>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="swiper-slide slider-reviews__item">
+                      <article class="reviews-card">
+                        <div class="reviews-card__img-block">
+                          <img
+                            src="img/catalog/image-3.jpg"
+                            alt=""
+                            class="reviews-card__img"
+                            width="120"
+                            height="120"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="reviews-card__content">
+                          <h3 class="reviews-card__title h4">
+                            Анастасия
+                            <span class="reviews-card__location">Москва</span>
+                          </h3>
+                          <div class="reviews-card__badge badge badge--gray">
+                            Вытяжка для мангала
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Вытяжка для мангала сделана качественно и
+                              добротно! Спасибо большое за чеканку на медном
+                              поясе получилась очень красивая беседка! Всё
+                              получилось отлично, как мы и хотели. Особенно
+                              порадовала цена и сроки, сделали за 10 дней. Всё
+                              сделали качественно и в срок. Буду рекомендовать
+                              вас друзьям.
+                            </p>
+                          </div>
+                          <audio
+                            class="reviews-card__audio"
+                            controls
+                            preload="none"
+                          >
+                            <source
+                              src="/uploads/review.mp3"
+                              type="audio/mpeg"
+                            />
+                          </audio>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </aside>
+              <div class="reviews__action">
+                <a href="/" class="reviews__link button button--accent"
+                  >Оставить отзыв</a
+                >
+              </div>
+              <section class="promo-banner promo-banner--accent">
+                <div class="promo-banner__image-wrapper">
+                  <img
+                    class="promo-banner__image"
+                    src="./img/service/image-2.jpg"
+                    alt="Изготовление металлических изделий"
+                    width="465"
+                    height="582"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="promo-banner__content">
+                  <p>* С 1 февраля 2026 года до 1 июня 2026 года</p>
+
+                  <h2>Скидка 10% <br />на все вытяжки <br />из нержавейки</h2>
+
+                  <p>
+                    Работаем по вашим чертежам и размерам. Используем
+                    качественный металл, надежные покрытия и аккуратную сварку.
+                  </p>
+
+                  <ul>
+                    <li>Срок изготовления от 7 дней</li>
+                    <li>Порошковая покраска и патинирование</li>
+                    <li>Доставка по Москве и области</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
           </div>
         </section>
       </div>

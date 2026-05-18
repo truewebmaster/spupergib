@@ -1,0 +1,8 @@
+@use "../helpers" as *;
+
+.slider-navigation {
+  flex-wrap: nowrap;
+  display: flex;
+  column-gap: rem(5);
+  justify-content: end;
+}

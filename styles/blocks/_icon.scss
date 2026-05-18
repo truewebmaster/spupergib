@@ -54,6 +54,10 @@
     }
   }
 
+  &--right {
+    rotate: 180deg;
+  }
+
   &--color-gray {
     background-color: var(--color-gray-80);
   }

@@ -60,6 +60,11 @@
     border: var(--border);
     border-radius: var(--border-radius-x);
     padding: rem(16) rem(12);
+
+    &:focus-visible {
+      outline: rem(2) solid var(--color-orange-15);
+      outline-offset: 0;
+    }
   }
 
   &__textarea {

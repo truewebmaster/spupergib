@@ -55,8 +55,15 @@
     }
   }
 
-  .layout__content {
+  &__content {
     grid-area: content;
+    min-width: 0;
+
+    &--gallery {
+      display: flex;
+      flex-direction: column;
+      row-gap: fluid(60, 30);
+    }
   }
 
   &--reverse-mobile {

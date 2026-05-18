@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SuperGib | Каталог</title>
+    <title>SuperGib | Контакты</title>
 
     <link rel="stylesheet" href="./css/main.min.css" />
+
     <script src="./js/main.js" type="module"></script>
   </head>
 
@@ -112,338 +113,96 @@
         <header class="page-header">
           <nav class="breadcrumbs">
             <span>
-              <a href="/">Главная</a> » <a href="/shop">Каталог</a> »
-              <span class="breadcrumb_last" aria-current="page">Вытяжки</span>
+              <a href="/">Главная</a> »
+              <span class="breadcrumb_last" aria-current="page">Контакты</span>
             </span>
           </nav>
 
-          <h1 class="page-header__title h2">Каталог изделий</h1>
+          <h1 class="page-header__title h2">Контакты</h1>
         </header>
 
-        <section class="section section--page-first shop">
-          <div class="shop__toolbar">
-            <div class="shop__toolbar-left">
-              <div class="shop__info">
-                <div class="shop__info-wrap">
-                  <svg
-                    class="shop__info-icon"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.3333 8 1.3333C4.3181 1.3333 1.3333 4.3181 1.3333 8C1.3333 11.6819 4.3181 14.6667 8 14.6667Z"
+        <section class="section contacts" aria-labelledby="contacts-title">
+          <h2 class="contacts__title visually-hidden" id="contacts-title">
+            Как с нами сязаться
+          </h2>
+          <div class="contacts__inner">
+            <div class="contacts__info">
+              <h3 class="contacts__title h4">Свяжитесь с нами</h3>
+
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <div class="icon icon--shadow icon--color-white">
+                    <img
+                      src="./icons/contacts/icon-1.svg"
+                      alt="Телефон"
+                      width="20"
+                      height="20"
+                      loading="lazy"
                     />
-                    <path d="M8 10.6667V8" />
-                    <path d="M8 5.3333H8.0067" />
-                  </svg>
-                  <span class="shop__info-text"
-                    >Условия оплаты, доставки и возврата</span
-                  >
-                </div>
-                <a href="#" class="shop__info-link">Подробнее</a>
-              </div>
-            </div>
-
-            <div class="shop__toolbar-right">
-              <div class="shop__result-count">Показано 12 из 44</div>
-
-              <div class="shop__sort">
-                <label class="visually-hidden" for="sort-shop">
-                  Сортировка:
-                </label>
-
-                <select class="shop__sort-select" id="sort-shop">
-                  <option value="popularity">По популярности</option>
-                  <option value="price-asc">Сначала дешевле</option>
-                  <option value="price-desc">Сначала дороже</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="layout layout--left-aside">
-            <aside class="aside layout__aside layout__aside--left">
-              <div class="aside__inner aside__inner--sticky">
-                <div class="aside__card aside__card--mini">
-                  <h2 class="widget-title">Категории</h2>
-                  <ul class="product-categories">
-                    <li class="cat-item current-cat">
-                      <a href="/category/chairs">Все товары</a>
-                    </li>
-                    <li class="cat-item">
-                      <a href="/category/chairs">Вытяжки</a>
-                    </li>
-
-                    <li class="cat-item">
-                      <a href="/category/tables">Короба для вытяжек</a>
-                    </li>
-
-                    <li class="cat-item">
-                      <a href="/category/sofas">Радиусные элементы</a>
-                    </li>
-
-                    <li class="cat-item">
-                      <a href="/category/sofas">Отливы и парапеты</a>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="aside__card aside__card--decor aside__card--banner-dark"
-                >
-                  <a href="/" class="individual-order">
-                    <h2 class="individual-order__title h5">
-                      Индивидуальный заказ
-                    </h2>
-                    <div class="individual-order__description">
-                      <p>
-                        Рассчитаем стоимость нестандартного изделия по вашим
-                        размерам
-                      </p>
-                    </div>
-                    <span class="individual-order__psevdo-link"
-                      >Оставить заявку</span
+                  </div>
+                  <div class="contacts__item-body">
+                    <h4 class="contacts__item-title">Телефон</h4>
+                    <a class="contacts__item-text" href="tel:+79525638484"
+                      >+7 (952) 563-84-84</a
                     >
-                  </a>
-                </div>
-              </div>
-            </aside>
-
-            <!-- Контент -->
-            <div class="layout__content">
-              <!-- Сетка товаров -->
-
-              <ul class="products grid grid--cols-3">
-                <li class="product type-product">
-                  <a href="#" class="product-card">
-                    <div class="product-card__media">
-                      <div class="product-card__image-wrapper">
-                        <img
-                          src="./img/catalog/image-1.jpg"
-                          alt="Вытяжка Каминная SG-15"
-                          class="product-card__image"
-                          width="370"
-                          height="370"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div class="product-card__overlay">
-                          <div class="product-card__overlay-inner">
-                            <span
-                              class="product-card__add-to-cart button button--product-card"
-                            >
-                              <svg
-                                class="icon icon--card icon--color-transparent"
-                                viewBox="0 0 30 25"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                aria-hidden="true"
-                              >
-                                <circle cx="9" cy="21" r="1" />
-                                <circle cx="20" cy="21" r="1" />
-                                <path
-                                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                                />
-                              </svg>
-                              <span>В корзину</span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-card__info">
-                      <h3 class="product-card__title">
-                        Вытяжка Каминная SG-15
-                      </h3>
-                      <div class="product-card__price">12 000 ₽</div>
-                    </div>
-                  </a>
+                  </div>
                 </li>
-                <li class="product type-product">
-                  <a href="#" class="product-card">
-                    <div class="product-card__media">
-                      <div class="product-card__image-wrapper">
-                        <img
-                          src="./img/catalog/image-1.jpg"
-                          alt="Вытяжка Каминная SG-15"
-                          class="product-card__image"
-                          width="370"
-                          height="370"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div class="product-card__overlay">
-                          <div class="product-card__overlay-inner">
-                            <span
-                              class="product-card__add-to-cart button button--product-card"
-                            >
-                              <svg
-                                class="icon icon--card icon--color-transparent"
-                                viewBox="0 0 30 25"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                aria-hidden="true"
-                              >
-                                <circle cx="9" cy="21" r="1" />
-                                <circle cx="20" cy="21" r="1" />
-                                <path
-                                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                                />
-                              </svg>
-                              <span>В корзину</span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-card__info">
-                      <h3 class="product-card__title">
-                        Вытяжка Каминная SG-15
-                      </h3>
-                      <div class="product-card__price">12 000 ₽</div>
-                    </div>
-                  </a>
+                <li class="contacts__item">
+                  <div class="icon icon--shadow icon--color-white">
+                    <img
+                      src="./icons/contacts/icon-2.svg"
+                      alt="Email"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="contacts__item-body">
+                    <h4 class="contacts__item-title">E-mail</h4>
+                    <a
+                      class="contacts__item-text"
+                      href="mailto:info@supergib.ru"
+                      >info@supergib.ru</a
+                    >
+                  </div>
                 </li>
-                <li class="product type-product">
-                  <a href="#" class="product-card">
-                    <div class="product-card__media">
-                      <div class="product-card__image-wrapper">
-                        <img
-                          src="./img/catalog/image-1.jpg"
-                          alt="Вытяжка Каминная SG-15"
-                          class="product-card__image"
-                          width="370"
-                          height="370"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div class="product-card__overlay">
-                          <div class="product-card__overlay-inner">
-                            <span
-                              class="product-card__add-to-cart button button--product-card"
-                            >
-                              <svg
-                                class="icon icon--card icon--color-transparent"
-                                viewBox="0 0 30 25"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                aria-hidden="true"
-                              >
-                                <circle cx="9" cy="21" r="1" />
-                                <circle cx="20" cy="21" r="1" />
-                                <path
-                                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                                />
-                              </svg>
-                              <span>В корзину</span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-card__info">
-                      <h3 class="product-card__title">
-                        Вытяжка Каминная SG-15
-                      </h3>
-                      <div class="product-card__price">12 000 ₽</div>
-                    </div>
-                  </a>
+                <li class="contacts__item">
+                  <div class="icon icon--shadow icon--color-white">
+                    <img
+                      src="./icons/contacts/icon-3.svg"
+                      alt="Адрес"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="contacts__item-body">
+                    <h4 class="contacts__item-title">Адрес производства</h4>
+                    <p class="contacts__item-text">
+                      Московская область, г. Люберцы, ул. Заводская, 1
+                    </p>
+                  </div>
                 </li>
-                <li class="product type-product">
-                  <a href="#" class="product-card">
-                    <div class="product-card__media">
-                      <div class="product-card__image-wrapper">
-                        <img
-                          src="./img/catalog/image-1.jpg"
-                          alt="Вытяжка Каминная SG-15"
-                          class="product-card__image"
-                          width="370"
-                          height="370"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                        <div class="product-card__overlay">
-                          <div class="product-card__overlay-inner">
-                            <span
-                              class="product-card__add-to-cart button button--product-card"
-                            >
-                              <svg
-                                class="icon icon--card icon--color-transparent"
-                                viewBox="0 0 30 25"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                aria-hidden="true"
-                              >
-                                <circle cx="9" cy="21" r="1" />
-                                <circle cx="20" cy="21" r="1" />
-                                <path
-                                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                                />
-                              </svg>
-                              <span>В корзину</span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="product-card__info">
-                      <h3 class="product-card__title">
-                        Вытяжка Каминная SG-15
-                      </h3>
-                      <div class="product-card__price">12 000 ₽</div>
-                    </div>
-                  </a>
+                <li class="contacts__item">
+                  <div class="icon icon--shadow icon--color-white">
+                    <img
+                      src="./icons/contacts/icon-4.svg"
+                      alt="Режим работы"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="contacts__item-body">
+                    <h4 class="contacts__item-title">Режим работы</h4>
+                    <p class="contacts__item-text">
+                      Пн-Пт: 9:00 - 18:00 Сб-Вс: выходной
+                    </p>
+                  </div>
                 </li>
               </ul>
-              <!-- Нижняя панель -->
-              <div class="shop__bottom">
-                <div class="shop__pagination">ПАГИНАЦИЯ</div>
-
-                <div class="shop__print">
-                  <button class="shop__print-button button button--white">
-                    <svg
-                      class="button__icon button__icon--white"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.333"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M4 12H2.667A1.333 1.333 0 0 1 1.333 10.667V7.333A1.333 1.333 0 0 1 2.667 6h10.666a1.333 1.333 0 0 1 1.334 1.333v3.334A1.333 1.333 0 0 1 13.333 12H12"
-                      />
-
-                      <path
-                        d="M4 6V2A.667.667 0 0 1 4.667 1.333h6.666A.667.667 0 0 1 12 2v4"
-                      />
-
-                      <rect
-                        x="4"
-                        y="9.333"
-                        width="8"
-                        height="5.333"
-                        rx=".667"
-                      />
-                    </svg>
-                    <span class="button__lable">Распечатать</span>
-                  </button>
-                </div>
-              </div>
             </div>
+            <div class="contacts__map"></div>
           </div>
         </section>
       </div>

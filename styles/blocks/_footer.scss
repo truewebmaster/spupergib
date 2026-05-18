@@ -70,15 +70,92 @@
     padding-block: fluid(45, 30);
   }
 
-  &__bottom-inner {
+  &__bottom-info {
+    display: grid;
+    row-gap: fluid-to-laptop(24, 18);
+    color: var(--color-gray-40);
+  }
+
+  &__bottom-description {
+    display: grid;
+    row-gap: rem(8);
+    max-width: rem(250);
+    font-size: rem(14);
+  }
+
+  &__navigation-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: fluid-to-laptop(80, 40);
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+      row-gap: rem(20);
+    }
+  }
+
+  &__navigation-list {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    row-gap: rem(16);
+    font-size: rem(14);
+    color: var(--color-gray-40);
+  }
+
+  &__bottom-time-work {
+    display: grid;
+    row-gap: rem(5);
+    justify-content: end;
+    text-align: right;
+    font-size: rem(14);
+    color: var(--color-gray-40);
+
+    @include tablet {
+      text-align: left;
+      justify-content: start;
+    }
+  }
+
+  &__bottom-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    column-gap: rem(20);
+    grid-template-areas: "info navigation time";
     justify-content: space-between;
 
+    @include tablet {
+      grid-template-columns: 1fr auto;
+      row-gap: rem(50);
+      grid-template-areas:
+        "info navigation"
+        "time time";
+    }
+
     @include mobile {
-      flex-direction: column;
-      text-align: center;
-      row-gap: rem(20);
+      grid-template-columns: 1fr;
+      grid-template-areas: unset;
+    }
+
+    @include mobile-s {
+      row-gap: rem(35);
+    }
+  }
+
+  &__bottom-info {
+    grid-area: info;
+  }
+  &__navigation {
+    grid-area: navigation;
+  }
+  &__bottom-time-work {
+    grid-area: time;
+  }
+
+  @include mobile {
+    &__bottom-info,
+    &__navigation,
+    &__bottom-time-work {
+      grid-area: unset;
     }
   }
 
@@ -89,6 +166,30 @@
 
   &__bottom-soc1als {
     display: flex;
-    column-gap: rem(15);
+    column-gap: rem(3);
+    justify-self: end;
+    margin-top: fluid-to-laptop(20, 10);
+
+    &-link {
+      @include hover {
+        filter: brightness(110%);
+      }
+    }
+
+    &-image {
+      @include square(rem(40));
+    }
+
+    @include tablet {
+      justify-self: start;
+    }
+  }
+
+  &__bottom-extra {
+    padding-top: fluid(30, 18);
+    margin-top: fluid(50, 30);
+    border-top: var(--border-light);
+    font-size: rem(14);
+    color: var(--color-gray-50);
   }
 }

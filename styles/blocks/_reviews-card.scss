@@ -1,0 +1,64 @@
+@use "../helpers" as *;
+
+.reviews-card {
+  display: flex;
+  column-gap: fluid-to-laptop(30, 20);
+
+  @include mobile-s {
+    flex-direction: column;
+    row-gap: rem(15);
+  }
+
+  @include hover {
+    .reviews-card__img {
+      scale: 110%;
+    }
+  }
+
+  &__img-block {
+    @include square(fluid-to-laptop(120, 80));
+
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: rem(10);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition-duration: var(--transition-duration);
+    will-change: transform;
+    display: block;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: rem(8);
+  }
+
+  &__location {
+    font-size: rem(14);
+    color: var(--color-gray-30);
+    font-weight: 400;
+  }
+
+  &__badge {
+    margin-bottom: rem(20);
+  }
+
+  &__text {
+    margin-bottom: rem(20);
+  }
+
+  &__audio {
+    width: 100%;
+    max-width: rem(680);
+    height: rem(48);
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+    // filter: invert(1) hue-rotate(180deg);
+  }
+}

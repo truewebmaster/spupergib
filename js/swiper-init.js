@@ -1,0 +1,90 @@
+document.addEventListener("DOMContentLoaded", () => {
+  initSlider();
+});
+
+function initSlider() {
+  const sliderBlocks = document.querySelectorAll("[data-js-slider]");
+
+  if (!sliderBlocks.length) return;
+
+  const options = {
+    gallery: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      autoHeight: true,
+      speed: 600,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 12,
+        },
+
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+
+        768: {
+          slidesPerView: 2.3,
+          spaceBetween: 20,
+        },
+
+        1160: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    },
+
+    reviews: {
+      slidesPerView: 1,
+      speed: 500,
+      autoHeight: true,
+      spaceBetween: 30,
+    },
+  };
+
+  sliderBlocks.forEach((block) => {
+    const swiperEl = block.querySelector(".js-slider");
+
+    if (!swiperEl || swiperEl.swiper) return;
+
+    // кнопки находятся в header (ВНЕ swiper)
+    const nextBtn = block.querySelector(".icon--right");
+    const prevBtn = block.querySelector(".icon--left");
+
+    if (!nextBtn || !prevBtn) {
+      console.warn("Swiper navigation buttons not found:", block);
+    }
+
+    // GALLERY
+    if (swiperEl.classList.contains("js-slider--gallery")) {
+      new Swiper(swiperEl, {
+        ...options.gallery,
+
+        navigation: {
+          nextEl: nextBtn,
+          prevEl: prevBtn,
+        },
+      });
+
+      return;
+    }
+
+    // REVIEWS
+    if (swiperEl.classList.contains("js-slider--reviews")) {
+      new Swiper(swiperEl, {
+        ...options.reviews,
+
+        navigation: {
+          nextEl: nextBtn,
+          prevEl: prevBtn,
+        },
+      });
+    }
+  });
+}

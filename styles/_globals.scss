@@ -1,6 +1,7 @@
 @use "helpers" as *;
 
 html {
+  scrollbar-gutter: stable;
   &.is-lock {
     overflow: hidden;
   }
@@ -114,11 +115,11 @@ blockquote {
   padding-top: rem(20);
 }
 
-.header,
-.footer {
-  display: none !important;
-}
+// .header,
+// .footer {
+//   display: none !important;
+// }
 
-main > section:not(:last-child) {
-  display: none !important;
-}
+// main > section:not(:last-child) {
+//   display: none !important;
+// }

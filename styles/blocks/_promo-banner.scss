@@ -1,0 +1,119 @@
+@use "../helpers" as *;
+
+.promo-banner {
+  display: grid;
+  grid-template-columns: minmax(rem(320), 42%) 1fr;
+
+  overflow: hidden;
+  border-radius: var(--border-radius-xl);
+  background-color: var(--color-gray-80);
+
+  @include laptop {
+    grid-template-columns: minmax(rem(280), 35%) 1fr;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  @include hover {
+    .promo-banner__image {
+      transform: scale(1.05);
+    }
+  }
+
+  & p,
+  h2,
+  h3,
+  ul {
+    margin: 0;
+  }
+
+  & ul {
+    padding-left: rem(16);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+  }
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: rem(280);
+
+    @include tablet {
+      min-height: rem(220);
+    }
+    @include mobile {
+      min-height: rem(200);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    will-change: transform;
+    display: block;
+
+    @include tablet {
+      max-height: rem(200);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: rem(20);
+
+    padding: fluid(48, 24);
+  }
+
+  & h2 {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: fluid-to-laptop(46, 26);
+    font-weight: 700;
+  }
+
+  // MODIFIERS
+
+  &--accent {
+    position: relative;
+
+    background-color: var(--color-accent-10);
+
+    color: var(--color-white);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          to right,
+          var(--color-gray-70) rem(1),
+          transparent rem(1)
+        ),
+        linear-gradient(
+          to bottom,
+          var(--color-gray-70) rem(1),
+          transparent rem(1)
+        );
+
+      background-size: rem(50) rem(50);
+
+      opacity: 0.08;
+
+      pointer-events: none;
+    }
+  }
+}
