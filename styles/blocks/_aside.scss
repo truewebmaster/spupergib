@@ -53,6 +53,7 @@
     padding: fluid-to-laptop(32, 24);
 
     &--mini {
+      padding: 0;
       @include mobile {
         padding: rem(8) rem(16);
       }
@@ -101,6 +102,10 @@
       color: var(--color-gray-50);
       border-radius: var(--border-radius-m);
       align-self: start;
+
+      .individual-order__description {
+        color: var(--color-gray-50);
+      }
 
       h2,
       h3 {

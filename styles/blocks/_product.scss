@@ -1,0 +1,47 @@
+@use "../helpers" as *;
+
+.product {
+  &__inner {
+    display: grid;
+    grid-template-columns: 40% auto;
+    column-gap: rem(64);
+    margin-bottom: var(--section-padding-block);
+
+    @include tablet-s {
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+    }
+
+    > * {
+      min-width: 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    column-gap: rem(15);
+    row-gap: rem(10); // отступ, если перенесутся на новую строку
+    margin-bottom: rem(20);
+    // flex-wrap: wrap;
+
+    // Чтобы заголовок занимал всё доступное место, а кнопки прижимались к правому краю
+    .product__title {
+      flex: 1 1 auto;
+      min-width: 0; // позволяет тексту усекаться, если нужно
+    }
+
+    .blog-actions {
+      flex-shrink: 0; // кнопки не сжимаются
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__related {
+    border-top: var(--border);
+  }
+}

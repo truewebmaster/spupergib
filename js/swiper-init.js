@@ -13,6 +13,7 @@ function initSlider() {
       spaceBetween: 20,
       autoHeight: true,
       speed: 600,
+
       breakpoints: {
         320: {
           slidesPerView: 1.2,
@@ -33,6 +34,7 @@ function initSlider() {
           slidesPerView: 2,
           spaceBetween: 20,
         },
+
         1440: {
           slidesPerView: 3,
           spaceBetween: 20,
@@ -46,22 +48,81 @@ function initSlider() {
       autoHeight: true,
       spaceBetween: 30,
     },
+
+    productThumbs: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+
+      watchSlidesProgress: true,
+      slideToClickedSlide: true,
+
+      breakpoints: {
+        320: {
+          spaceBetween: 12,
+        },
+
+        768: {
+          spaceBetween: 16,
+        },
+
+        1160: {
+          spaceBetween: 20,
+        },
+      },
+    },
+
+    productMain: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoHeight: true,
+      speed: 500,
+    },
   };
 
   sliderBlocks.forEach((block) => {
+    // ===== PRODUCT GALLERY =====
+
+    if (block.classList.contains("product-gallery")) {
+      const thumbsEl = block.querySelector(".js-slider-product-thumbs");
+
+      const mainEl = block.querySelector(".js-slider-product-main");
+
+      if (!thumbsEl || !mainEl) return;
+
+      if (thumbsEl.swiper || mainEl.swiper) return;
+
+      const thumbsSwiper = new Swiper(thumbsEl, {
+        ...options.productThumbs,
+      });
+
+      const mainSwiper = new Swiper(mainEl, {
+        ...options.productMain,
+
+        thumbs: {
+          swiper: thumbsSwiper,
+        },
+
+        on: {
+          slideChange(swiper) {
+            thumbsSwiper.slideTo(swiper.activeIndex);
+          },
+        },
+      });
+
+      return;
+    }
+
+    // ===== COMMON SLIDERS =====
+
     const swiperEl = block.querySelector(".js-slider");
 
     if (!swiperEl || swiperEl.swiper) return;
 
-    // кнопки находятся в header (ВНЕ swiper)
     const nextBtn = block.querySelector(".icon--right");
     const prevBtn = block.querySelector(".icon--left");
 
-    if (!nextBtn || !prevBtn) {
-      console.warn("Swiper navigation buttons not found:", block);
-    }
+    // ===== GALLERY =====
 
-    // GALLERY
     if (swiperEl.classList.contains("js-slider--gallery")) {
       new Swiper(swiperEl, {
         ...options.gallery,
@@ -75,7 +136,8 @@ function initSlider() {
       return;
     }
 
-    // REVIEWS
+    // ===== REVIEWS =====
+
     if (swiperEl.classList.contains("js-slider--reviews")) {
       new Swiper(swiperEl, {
         ...options.reviews,
@@ -85,6 +147,8 @@ function initSlider() {
           prevEl: prevBtn,
         },
       });
+
+      return;
     }
   });
 }
